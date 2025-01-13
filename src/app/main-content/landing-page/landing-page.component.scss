@@ -1,0 +1,159 @@
+.landing-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(
+    to bottom left,
+    rgba(8, 70, 59, 1),
+    // rgba(28, 28, 28, 1) 60%,
+    rgb(15, 15, 15) 60%
+  );
+  color: #d9d9d9;
+  // z-index: -10;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+
+    a {
+      padding: 10px 24px;
+      border: 1px solid rgba(255, 255, 255, 1);
+      border-radius: 100px;
+    }
+  }
+}
+
+h1 {
+  font-size: 110px;
+  font-weight: 700;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 400;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  text-align: center;
+}
+
+.lateral-wapper {
+  display: flex;
+  // z-index: -1;
+}
+
+.left-laetral {
+  position: absolute;
+  left: 96px;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  img {
+    width: 30px;
+  }
+  div {
+    display: flex;
+    height: 240px;
+    border-left: 1px solid rgba(61, 207, 182, 1);
+  }
+}
+
+.right-lateral {
+  position: absolute;
+  right: 96px;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  gap: 24px;
+}
+
+.mail{
+  rotate: -90deg;
+  margin-bottom: 108px;
+    // height: 235px;
+    // display: flex;
+    // align-items: center;
+}
+
+.git {
+  width: 32px;
+  height: 32px;
+  background-image: url(../../../assets/img/github.svg);
+  background-position: center;
+  background-size: cover;
+
+  &:hover {
+    background-image: url(../../../assets/img/github-hover.svg);
+  }
+}
+
+.linked {
+  width: 32px;
+  height: 32px;
+  background-image: url(../../../assets/img/linkedIn.svg);
+  background-position: center;
+  background-size: cover;
+
+  &:hover {
+    background-image: url(../../../assets/img/linkedIn-hover.svg);
+  }
+}
+
+.vector-right {
+  height: 186px;
+  border-left: 1px solid rgba(61, 207, 182, 1);
+}
+
+.banner {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100% !important;
+  bottom: 20px;
+  rotate: -3deg;
+  overflow: hidden;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  width: 110%;
+  background-color: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(5px);
+  color: rgba(61, 207, 182, 1);
+  div {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    font-size: 32px;
+    font-weight: 400;
+    white-space: nowrap;
+    animation: scroll 60s linear infinite;
+  }
+
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%); /* Start rechts außerhalb des Bildschirms */
+  }
+  100% {
+    transform: translateX(-50%); /* Bewegt sich nach links außerhalb des Bildschirms */
+  }
+}
