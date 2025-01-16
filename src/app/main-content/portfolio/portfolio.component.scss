@@ -1,0 +1,61 @@
+.portfolio-wrapper {
+  background-color: rgba(28, 28, 28, 1);
+  display: flex;
+  flex-direction: column;
+  padding: 0 96px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: rgba(61, 207, 182, 1);
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 64px;
+  font-weight: 700;
+  color: rgba(61, 207, 182, 1);
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+p {
+  text-align: justify;
+  width: 456px;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.projects-overview {
+  width: 880px ;
+  border-top: 1px solid rgba(61, 207, 182, 1);
+  margin-bottom: 16px;
+}
+
+.single-project {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 32px;
+  border-bottom: 1px solid rgba(61, 207, 182, 1);
+  &:hover {
+    background-color: rgba(47, 91, 83, 1);
+    cursor: pointer;
+  }
+}
+
+.project-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+}
+
+.projects-skills {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+}
