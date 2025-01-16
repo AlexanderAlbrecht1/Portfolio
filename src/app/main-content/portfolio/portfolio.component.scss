@@ -42,16 +42,35 @@ p {
   justify-content: space-between;
   padding: 40px 32px;
   border-bottom: 1px solid rgba(61, 207, 182, 1);
+
   &:hover {
     background-color: rgba(47, 91, 83, 1);
     cursor: pointer;
+    .img-wrapper {
+      background-image: url('../../../assets/img/arrow.svg');
+    }
   }
+}
+
+.d-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-title {
   font-size: 24px;
   font-weight: 700;
   color: rgba(255, 255, 255, 1);
+}
+
+.img-wrapper {
+  margin-left: 4px;
+  width: 23px;
+  height: 23px;
+  background-position: center;
+  background-size: 13px 13px;
+  background-repeat: no-repeat;
 }
 
 .projects-skills {
