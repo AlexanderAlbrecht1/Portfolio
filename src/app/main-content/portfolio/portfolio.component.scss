@@ -31,8 +31,13 @@ p {
   margin-bottom: 40px;
 }
 
+.projects-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .projects-overview {
-  width: 880px ;
+  width: 880px;
   border-top: 1px solid rgba(61, 207, 182, 1);
   margin-bottom: 16px;
 }
@@ -47,7 +52,7 @@ p {
     background-color: rgba(47, 91, 83, 1);
     cursor: pointer;
     .img-wrapper {
-      background-image: url('../../../assets/img/arrow.svg');
+      background-image: url("../../../assets/img/arrow.svg");
     }
   }
 }
@@ -78,3 +83,47 @@ p {
   font-weight: 400;
   color: rgba(255, 255, 255, 1);
 }
+
+.projects-preview {
+  margin-left: 72px;
+  display: flex;
+  flex-direction: column;
+}
+
+.preview-project-one {
+  position: relative;
+}
+
+.prev-img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 295px;
+  height: 192px;
+  border-radius: 16px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../../../assets/img/projects/Join.png");
+}
+
+.prev-bg {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 295px;
+  height: 192px;
+  border-radius: 16px;
+  background: repeating-linear-gradient(
+      135deg,
+      rgba(61, 207, 182, 1),
+      rgba(61, 207, 182, 1) 1px,
+      transparent 1px,
+      transparent 10px
+    )
+}
+
+.block {
+  display: block;
+}
+

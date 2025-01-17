@@ -5,27 +5,35 @@
     Explore a selection of my work here - Interact with projects to see my
     skills in action.
   </p>
-  <div class="projects-overview">
-    <div class="single-project">
-      <div class="d-flex-center">
-        <span class="project-title fira-code">Join</span>
-        <div class="img-wrapper"></div>
+  <div class="projects-container">
+    <div class="projects-overview">
+      <div class="single-project" id="project-1" (mouseover)="hoveredProject = 1" (mouseout)="hoveredProject = 0">
+        <div class="d-flex-center">
+          <span class="project-title fira-code">Join</span>
+          <div class="img-wrapper"></div>
+        </div>
+        <span class="projects-skills">JavaScript | HTML | CSS | Firebase</span>
       </div>
-      <span class="projects-skills">JavaScript | HTML | CSS | Firebase</span>
+      <div class="single-project" id="project-2">
+        <div class="d-flex-center">
+          <span class="project-title fira-code">Little Sharkie</span>
+          <div class="img-wrapper"></div>
+        </div>
+        <span class="projects-skills">JavaScript | HTML | CSS</span>
+      </div>
+      <div class="single-project">
+        <div class="d-flex-center">
+          <span class="project-title fira-code">Pokedex</span>
+          <div class="img-wrapper"></div>
+        </div>
+        <span class="projects-skills">JavaScript | HTML | CSS | Rest-Api</span>
+      </div>
     </div>
-    <div class="single-project">
-      <div class="d-flex-center">
-        <span class="project-title fira-code">Little Sharkie</span>
-        <div class="img-wrapper"></div>
+    <div class="projects-preview">
+      <div class="preview-project-one d-none" [class.block]="hoveredProject === 1">
+        <div class="prev-bg"></div>
+        <div class="prev-img"></div>
       </div>
-      <span class="projects-skills">JavaScript | HTML | CSS</span>
-    </div>
-    <div class="single-project">
-      <div class="d-flex-center">
-        <span class="project-title fira-code">Pokedex</span>
-        <div class="img-wrapper"></div>
-      </div>
-      <span class="projects-skills">JavaScript | HTML | CSS | Rest-Api</span>
     </div>
   </div>
 </div>
