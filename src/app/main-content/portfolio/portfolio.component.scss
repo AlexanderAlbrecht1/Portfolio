@@ -39,7 +39,7 @@ p {
 .projects-overview {
   width: 880px;
   border-top: 1px solid rgba(61, 207, 182, 1);
-  margin-bottom: 16px;
+  margin-bottom: 64px;
 }
 
 .single-project {
@@ -85,6 +85,7 @@ p {
 }
 
 .projects-preview {
+  height: 332px;
   margin-left: 72px;
   display: flex;
   flex-direction: column;
@@ -92,38 +93,132 @@ p {
 
 .preview-project-one {
   position: relative;
-}
 
-.prev-img {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 295px;
-  height: 192px;
-  border-radius: 16px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("../../../assets/img/projects/Join.png");
-}
-
-.prev-bg {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 295px;
-  height: 192px;
-  border-radius: 16px;
-  background: repeating-linear-gradient(
+  > div:nth-child(1) {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 295px;
+    height: 192px;
+    border-radius: 16px;
+    background: repeating-linear-gradient(
       135deg,
       rgba(61, 207, 182, 1),
       rgba(61, 207, 182, 1) 1px,
       transparent 1px,
       transparent 10px
-    )
+    );
+  }
+
+  > div:nth-child(2) {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 295px;
+    height: 192px;
+    border-radius: 16px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../../../assets/img/projects/Join.png");
+  }
+}
+
+.preview-project-two {
+  position: relative;
+  top: -112px;
+
+  > div:nth-child(1) {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 295px;
+    height: 192px;
+    border-radius: 16px;
+    background: repeating-linear-gradient(
+      135deg,
+      rgba(61, 207, 182, 1),
+      rgba(61, 207, 182, 1) 1px,
+      transparent 1px,
+      transparent 10px
+    );
+  }
+
+  > div:nth-child(2) {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 295px;
+    height: 192px;
+    border-radius: 16px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../../../assets/img/projects/sharkie.png");
+  }
+}
+
+.preview-project-three {
+  position: relative;
+  top: -232px;
+
+  > div:nth-child(1) {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 295px;
+    height: 192px;
+    border-radius: 16px;
+    background: repeating-linear-gradient(
+      135deg,
+      rgba(61, 207, 182, 1),
+      rgba(61, 207, 182, 1) 1px,
+      transparent 1px,
+      transparent 10px
+    );
+  }
+
+  > div:nth-child(2) {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 295px;
+    height: 192px;
+    border-radius: 16px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../../../assets/img/projects/pokedex.png");
+  }
 }
 
 .block {
-  display: block;
+  visibility: visible;
 }
 
+// Overlay for Project Details
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: var(--scroll-y);
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  >div {
+    width: 90%;
+    height: 80%;
+    border: 1px solid rgba(61, 207, 182, 1);
+    border-radius: 16px;
+    background-image: linear-gradient(
+    to bottom left,
+    rgba(8, 70, 59, 1),
+    rgba(28, 28, 28, 1) 60%,
+  );
+  }
+}
