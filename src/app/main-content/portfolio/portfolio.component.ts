@@ -1,9 +1,10 @@
 import { Component,HostListener } from '@angular/core';
+import { ProjectDetailsComponent } from './project-details/project-details.component';
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [],
+  imports: [ProjectDetailsComponent],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
 })

@@ -91,7 +91,7 @@ p {
   flex-direction: column;
 }
 
-.preview-project-one {
+.preview-frame {
   position: relative;
 
   > div:nth-child(1) {
@@ -120,74 +120,27 @@ p {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+  }
+}
+
+.preview-project-one {
+  > div:nth-child(2) {
     background-image: url("../../../assets/img/projects/Join.png");
   }
 }
 
 .preview-project-two {
-  position: relative;
   top: -112px;
 
-  > div:nth-child(1) {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 295px;
-    height: 192px;
-    border-radius: 16px;
-    background: repeating-linear-gradient(
-      135deg,
-      rgba(61, 207, 182, 1),
-      rgba(61, 207, 182, 1) 1px,
-      transparent 1px,
-      transparent 10px
-    );
-  }
-
   > div:nth-child(2) {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 295px;
-    height: 192px;
-    border-radius: 16px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     background-image: url("../../../assets/img/projects/sharkie.png");
   }
 }
 
 .preview-project-three {
-  position: relative;
   top: -232px;
 
-  > div:nth-child(1) {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 295px;
-    height: 192px;
-    border-radius: 16px;
-    background: repeating-linear-gradient(
-      135deg,
-      rgba(61, 207, 182, 1),
-      rgba(61, 207, 182, 1) 1px,
-      transparent 1px,
-      transparent 10px
-    );
-  }
-
   > div:nth-child(2) {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 295px;
-    height: 192px;
-    border-radius: 16px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     background-image: url("../../../assets/img/projects/pokedex.png");
   }
 }
@@ -211,8 +164,11 @@ p {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   >div {
-    width: 90%;
-    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 86%;
+    height: 73%;
     border: 1px solid rgba(61, 207, 182, 1);
     border-radius: 16px;
     background-image: linear-gradient(
