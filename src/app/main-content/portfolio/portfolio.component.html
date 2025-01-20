@@ -1,7 +1,15 @@
 <div class="portfolio-wrapper">
-  <div class="overlay">
+  <div
+    class="overlay d-none"
+    [class.visibil]="
+      clickedProject === 1 || clickedProject === 2 || clickedProject === 3
+    "
+  >
     <div>
-      <app-project-details></app-project-details>
+      <app-project-details
+        [project]="clickedProject"
+        (resetProjectEvent)="resetProjectId()"
+      ></app-project-details>
     </div>
   </div>
   <h3>Portfolio</h3>
@@ -12,21 +20,36 @@
   </p>
   <div class="projects-container">
     <div class="projects-overview">
-      <div class="single-project" (mouseover)="hoveredProject = 1" (mouseout)="hoveredProject = 0">
+      <div
+        class="single-project"
+        (mouseover)="hoveredProject = 1"
+        (mouseout)="hoveredProject = 0"
+        (click)="selectProject(1)"
+      >
         <div class="d-flex-center">
           <span class="project-title fira-code">Join</span>
           <div class="img-wrapper"></div>
         </div>
         <span class="projects-skills">JavaScript | HTML | CSS | Firebase</span>
       </div>
-      <div class="single-project" (mouseover)="hoveredProject = 2" (mouseout)="hoveredProject = 0">
+      <div
+        class="single-project"
+        (mouseover)="hoveredProject = 2"
+        (mouseout)="hoveredProject = 0"
+        (click)="selectProject(2)"
+      >
         <div class="d-flex-center">
           <span class="project-title fira-code">Little Sharkie</span>
           <div class="img-wrapper"></div>
         </div>
         <span class="projects-skills">JavaScript | HTML | CSS</span>
       </div>
-      <div class="single-project" (mouseover)="hoveredProject = 3" (mouseout)="hoveredProject = 0">
+      <div
+        class="single-project"
+        (mouseover)="hoveredProject = 3"
+        (mouseout)="hoveredProject = 0"
+        (click)="selectProject(3)"
+      >
         <div class="d-flex-center">
           <span class="project-title fira-code">Pokedex</span>
           <div class="img-wrapper"></div>
@@ -35,15 +58,24 @@
       </div>
     </div>
     <div class="projects-preview">
-      <div class="preview-frame preview-project-one d-none" [class.block]="hoveredProject === 1">
+      <div
+        class="preview-frame preview-project-one d-none"
+        [class.visibil]="hoveredProject === 1"
+      >
         <div></div>
         <div></div>
       </div>
-      <div class="preview-frame preview-project-two d-none" [class.block]="hoveredProject === 2">
+      <div
+        class="preview-frame preview-project-two d-none"
+        [class.visibil]="hoveredProject === 2"
+      >
         <div></div>
         <div></div>
       </div>
-      <div class="preview-frame preview-project-three d-none" [class.block]="hoveredProject === 3">
+      <div
+        class="preview-frame preview-project-three d-none"
+        [class.visibil]="hoveredProject === 3"
+      >
         <div></div>
         <div></div>
       </div>

@@ -6,11 +6,12 @@ import {
   TranslatePipe,
   TranslateDirective
 } from "@ngx-translate/core";
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, TranslatePipe, TranslateDirective],
+  imports: [CommonModule, RouterOutlet, TranslatePipe, TranslateDirective, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

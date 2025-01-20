@@ -1,4 +1,4 @@
-<div class="project-detail-wrapper">
+<div class="project-detail-wrapper"  *ngIf="project === 1">
   <div>
     <h1>01</h1>
     <h2>Join</h2>
@@ -7,7 +7,6 @@
       Task manager inspired by the Kanban System. Create and organize tasks
       using drag and drop functions, assign users and categories.
     </p>
-    <!-- <div> -->
     <div class="skill-wrapper">
       <div class="skill">
         <img
@@ -39,18 +38,129 @@
       </div>
     </div>
     <div class="btns-wrapper">
-      <a class="btn" href="">GitHub <div></div></a>
-      <a class="btn" href="">Live Test <img src="/assets/img/icons_overlay/arrow_green.svg" alt=""></a>
+      <a class="btn" target="_blank" href="https://github.com/AlexanderAlbrecht1/join-group">GitHub <div></div></a>
+      <a class="btn" href="">Live Test <div></div></a>
     </div>
   </div>
   <div>
     <div class="close-window-wrapper">
-      <img src="" alt="" />
+      <div (click)="onResetProject()"></div>
     </div>
     <img src="/assets/img/projects/Join.png" alt="" />
-    <div class="next-project-wrapper">
+    <div class="next-project-wrapper" (click)="nextProject()">
       <span>Next project</span>
-      <img src="" alt="" />
+      <div></div>
+    </div>
+  </div>
+</div>
+
+<div class="project-detail-wrapper"  *ngIf="project === 2">
+  <div>
+    <h1>02</h1>
+    <h2>Little Sharkie</h2>
+    <h3 class="fira-code">What is this project about?</h3>
+    <p>
+      Bla pups 2 D GAme
+    </p>
+    <div class="skill-wrapper">
+      <div class="skill">
+        <img
+          src="/assets/img/icons_overlay/javascript.svg"
+          alt="official JavaScript Icon"
+        />
+        <span>JavaScript</span>
+      </div>
+      <div class="skill">
+        <img
+          src="/assets/img/icons_overlay/html.svg"
+          alt="official HTML Icon"
+        />
+        <span>HTML</span>
+      </div>
+      <div class="skill">
+        <img
+          src="/assets/img/icons_overlay/css.svg"
+          alt="official CSS Icon"
+        />
+        <span>CSS</span>
+      </div>
+      <div class="skill">
+        <img
+          src="/assets/img/icons_overlay/firebase.svg"
+          alt="official Firebase Icon"
+        />
+        <span>Firebase</span>
+      </div>
+    </div>
+    <div class="btns-wrapper">
+      <a class="btn" target="_blank" href="https://github.com/AlexanderAlbrecht1/join-group">GitHub <div></div></a>
+      <a class="btn" href="">Live Test <div></div></a>
+    </div>
+  </div>
+  <div>
+    <div class="close-window-wrapper">
+      <div (click)="onResetProject()"></div>
+    </div>
+    <img src="/assets/img/projects/Join.png" alt="" />
+    <div class="next-project-wrapper" (click)="nextProject()">
+      <span>Next project</span>
+      <div></div>
+    </div>
+  </div>
+</div>
+
+<div class="project-detail-wrapper" *ngIf="project === 3">
+  <div>
+    <h1>03</h1>
+    <h2>Pokedex</h2>
+    <h3 class="fira-code">What is this project about?</h3>
+    <p>
+      Task manager inspired by the Kanban System. Create and organize tasks
+      using drag and drop functions, assign users and categories.
+    </p>
+    <div class="skill-wrapper">
+      <div class="skill">
+        <img
+          src="/assets/img/icons_overlay/javascript.svg"
+          alt="official JavaScript Icon"
+        />
+        <span>JavaScript</span>
+      </div>
+      <div class="skill">
+        <img
+          src="/assets/img/icons_overlay/html.svg"
+          alt="official HTML Icon"
+        />
+        <span>HTML</span>
+      </div>
+      <div class="skill">
+        <img
+          src="/assets/img/icons_overlay/css.svg"
+          alt="official CSS Icon"
+        />
+        <span>CSS</span>
+      </div>
+      <div class="skill">
+        <img
+          src="/assets/img/icons_overlay/firebase.svg"
+          alt="official Firebase Icon"
+        />
+        <span>Firebase</span>
+      </div>
+    </div>
+    <div class="btns-wrapper">
+      <a class="btn" target="_blank" href="https://github.com/AlexanderAlbrecht1/join-group">GitHub <div></div></a>
+      <a class="btn" href="">Live Test <div></div></a>
+    </div>
+  </div>
+  <div>
+    <div class="close-window-wrapper">
+      <div (click)="onResetProject()"></div>
+    </div>
+    <img src="/assets/img/projects/Join.png" alt="" />
+    <div class="next-project-wrapper" (click)="nextProject()">
+      <span>Next project</span>
+      <div></div>
     </div>
   </div>
 </div>
