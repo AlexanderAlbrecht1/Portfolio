@@ -7,11 +7,13 @@ import {
   TranslateDirective
 } from "@ngx-translate/core";
 import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, TranslatePipe, TranslateDirective, FormsModule],
+  imports: [CommonModule, RouterOutlet, TranslatePipe, TranslateDirective, FormsModule, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
