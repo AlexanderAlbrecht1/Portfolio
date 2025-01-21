@@ -19,11 +19,9 @@ export class PortfolioComponent {
 
   }
 
-  // Methode, um die ID auf null zurückzusetzen
   resetProjectId(): void {
     this.clickedProject = 0;
   }
-
 
   @HostListener('window:scroll', [])
   onScroll(): void {

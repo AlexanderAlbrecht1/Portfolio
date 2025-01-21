@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 export class ProjectDetailsComponent {
 
   @Input() project!: number;
-  @Output() projectUpdated = new EventEmitter<number>();
+
   @Output() resetProjectEvent = new EventEmitter<void>();
 
   ngOnChanges(changes: SimpleChanges): void {
