@@ -70,13 +70,12 @@
   }
 
   >a:hover {
-    cursor: default !important;
     color: rgba(61, 207, 182, 1);
     transition: 0.5s ease;
   }
   // >a:hover .hover-wrapper {
-  //   visibility: visible;
-  // }
+    //   visibility: visible;
+    // }
 }
 a:hover .hover-wrapper {
   visibility: visible !important;
