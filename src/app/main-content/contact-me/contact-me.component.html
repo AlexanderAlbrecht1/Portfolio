@@ -12,47 +12,55 @@
     <p>Let’s talk!</p>
   </div>
   <div>
-    <form action="p">
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
       <div class="form-group">
         <label class="fira-code label" for="name">What's your name?</label>
         <input
+          [(ngModel)]="contactData.name"
           type="text"
           id="name"
           name="name"
           placeholder="Your name goes here"
+          required
         />
       </div>
       <div class="form-group">
         <label class="fira-code label" for="name" for="email">What's your email?</label>
         <input
+          [(ngModel)]="contactData.email"
           type="email"
           id="email"
           name="email"
           placeholder="youremail@mail.com"
+          required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
         />
       </div>
       <div class="form-group">
         <label class="fira-code label" for="name" for="message">How can I help you?</label>
         <input
+        [(ngModel)]="contactData.message"
           type="text"
           id="message"
           name="message"
           placeholder="Hey Alex, I am interessted in ..."
+          required
         />
       </div>
       <div class="form-group">
         <input
+        [(ngModel)]="contactData.privacyPolicy"
           type="checkbox"
           id="privacyPolicy"
           name="privacyPolicy"
           value="privacyPolicy"
+          required
         />
         <label for="privacyPolicy">
           I've read the privacy policy and agree to the processing of my data as
           outlined. </label
         ><br />
       </div>
-      <input type="submit" value="Say Hello!" />
+      <input type="submit" value="Say Hello!" [disabled]="!contactForm.valid" />
     </form>
   </div>
 </div>
