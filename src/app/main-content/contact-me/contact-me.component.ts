@@ -1,11 +1,12 @@
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { Component, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contact-me',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './contact-me.component.html',
   styleUrl: './contact-me.component.scss'
 })
@@ -18,6 +19,27 @@ export class ContactMeComponent {
     email : '',
     message : '',
     privacyPolicy: false,
+  }
+
+  getNamePlaceholder(name : NgModel): string {
+    if (!name.valid && name.touched) {
+      return 'Oops! You forgot your name!';
+    }
+    return "What's your name?";
+  }
+
+  getMailPlaceholder(name : NgModel): string {
+    if (!name.valid && name.touched) {
+      return 'Hoppla! I need your email to answer you!';
+    }
+    return "youremail@mail.com";
+  }
+
+  getMessagePlaceholder(name : NgModel): string {
+    if (!name.valid && name.touched) {
+      return 'What do you want to know?';
+    }
+    return "Hey Alex, I am interessted in ...";
   }
 
   mailTest = true;
@@ -47,6 +69,7 @@ export class ContactMeComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+      console.log(this.contactData);
 
       ngForm.resetForm();
     }

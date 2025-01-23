@@ -91,6 +91,29 @@
   border-top: 1px solid rgba(61, 207, 182, .5);
 }
 
+input {
+  font-size: 18px;
+  line-height: 22px;
+  background-color: rgba(28, 28, 28, 1);
+  color: rgba(255, 255, 255, 1);
+  border: none;
+  outline: none;
+}
+
+input.ng-invalid.ng-touched::placeholder {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  color: rgba(236, 123, 123, 0.8);
+}
+
+
+::placeholder {
+  color: rgba(255, 255, 255, .8);
+  font-size: 18px;
+  line-height: 22px;
+}
+
 .link {
   font-size: 15px;
   line-height: 18px;

@@ -22,7 +22,7 @@
           type="text"
           id="name"
           name="name"
-          placeholder="Your name goes here"
+          [placeholder]="getNamePlaceholder(name)"
           required
         />
       </div>
@@ -36,7 +36,7 @@
           type="email"
           id="email"
           name="email"
-          placeholder="youremail@mail.com"
+          [placeholder]="getMailPlaceholder(email)"
           required
           pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
         />
@@ -52,7 +52,7 @@
           type="text"
           id="message"
           name="message"
-          placeholder="Hey Alex, I am interessted in ..."
+          [placeholder]="getMessagePlaceholder(message)"
           required
         />
       </div>
@@ -72,13 +72,7 @@
         ><br />
       </div>
 
-      @if (!message.valid && message.touched && !message.disabled) {
-      <span class="errCom">Please leaf a message</span>
-      } @else if (!name.valid && name.touched) {
-      <span class="errCom">Please tell me your name</span>
-      } @else if (!email.valid && email.touched) {
-      <span class="errCom">Where should I send my reply?</span>
-      } @else if (name.valid && email.valid && message.valid && !privacyPolicy.valid) {
+      @if (name.valid && email.valid && message.valid && !privacyPolicy.valid) {
         <span class="errCom">Please accept the privacy policy</span>
       }
 
