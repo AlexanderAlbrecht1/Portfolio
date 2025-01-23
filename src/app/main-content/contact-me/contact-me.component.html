@@ -16,6 +16,8 @@
       <div class="form-group">
         <label class="fira-code label" for="name">What's your name?</label>
         <input
+          #name="ngModel"
+          minlength="2"
           [(ngModel)]="contactData.name"
           type="text"
           id="name"
@@ -25,20 +27,28 @@
         />
       </div>
       <div class="form-group">
-        <label class="fira-code label" for="name" for="email">What's your email?</label>
+        <label class="fira-code label" for="name" for="email"
+          >What's your email?</label
+        >
         <input
+          #email="ngModel"
           [(ngModel)]="contactData.email"
           type="email"
           id="email"
           name="email"
           placeholder="youremail@mail.com"
-          required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+          required
+          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
         />
       </div>
       <div class="form-group">
-        <label class="fira-code label" for="name" for="message">How can I help you?</label>
+        <label class="fira-code label" for="name" for="message"
+          >How can I help you?</label
+        >
         <input
-        [(ngModel)]="contactData.message"
+          #message="ngModel"
+          minlength="5"
+          [(ngModel)]="contactData.message"
           type="text"
           id="message"
           name="message"
@@ -48,7 +58,8 @@
       </div>
       <div class="form-group">
         <input
-        [(ngModel)]="contactData.privacyPolicy"
+          #privacyPolicy="ngModel"
+          [(ngModel)]="contactData.privacyPolicy"
           type="checkbox"
           id="privacyPolicy"
           name="privacyPolicy"
@@ -56,10 +67,21 @@
           required
         />
         <label for="privacyPolicy">
-          I've read the privacy policy and agree to the processing of my data as
+          I've read the <a class="fira-code link" href="privacyPolicy">privacy policy</a> and agree to the processing of my data as
           outlined. </label
         ><br />
       </div>
+
+      @if (!message.valid && message.touched && !message.disabled) {
+      <span class="errCom">Please leaf a message</span>
+      } @else if (!name.valid && name.touched) {
+      <span class="errCom">Please tell me your name</span>
+      } @else if (!email.valid && email.touched) {
+      <span class="errCom">Where should I send my reply?</span>
+      } @else if (name.valid && email.valid && message.valid && !privacyPolicy.valid) {
+        <span class="errCom">Please accept the privacy policy</span>
+      }
+
       <input type="submit" value="Say Hello!" [disabled]="!contactForm.valid" />
     </form>
   </div>
