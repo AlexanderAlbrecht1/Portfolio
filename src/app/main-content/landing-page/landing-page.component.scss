@@ -47,15 +47,6 @@
           animation-delay: 0s, 2s;
         }
       }
-
-      // >span {
-
-      //   &:hover {
-      //     animation: hoverAnimation 5s infinite;
-      //     color: sandybrown;
-      //   }
-
-      // }
     }
   }
 }
@@ -67,21 +58,12 @@
   100% {
     transform: translateX(-150px);
   }
-  // 75% {
-  //   transform: translateX(200px);
-  // }
-  // 100% {
-  //   transform: translateX(0);
-  // }
 }
 
 @keyframes hoverAnimation {
   0% {
     transform: translateX(150px);
   }
-  // 50% {
-  //   transform: translateX(0);
-  // }
   100% {
     transform: translateX(-200px);
   }
@@ -112,7 +94,6 @@ h2 {
   align-items: flex-end;
   max-width: 1920px;
   padding: 0 96px;
-  // z-index: -1;
 }
 
 .left-laetral {
@@ -121,13 +102,35 @@ h2 {
   justify-content: center;
   align-items: center;
   gap: 24px;
-  img {
-    width: 30px;
-  }
-  div {
+
+    >a:nth-child(1) {
+      width: 30px;
+      height: 48px;
+      border: 1px solid rgba(61, 207, 182, 1);
+      border-radius: 15px;
+
+      >div:nth-child(1) {
+        animation: jump 1.5s infinite;
+      }
+
+    }
+
+   >div:nth-child(2) {
     display: flex;
     height: 240px;
     border-left: 1px solid rgba(61, 207, 182, 1);
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
