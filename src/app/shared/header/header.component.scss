@@ -12,7 +12,11 @@
   max-width: 1920px;
   height: 100px;
   padding: 0 96px;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0)
+  );
   img {
     height: 50px;
   }
@@ -24,6 +28,32 @@
   align-items: center;
   gap: 24px;
   width: auto;
+
+  > a {
+    padding-top: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > div {
+      margin-top: 4px;
+      width: 4px;
+      height: 4px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  > a:hover {
+    color: rgba(61, 207, 182, 1);
+    transition: 0.2s ease;
+    > div {
+      background-image: url(../../../assets/img/dot.svg);
+      // visibility: visible;
+      transition: 0.5s ease;
+    }
+  }
 }
 
 .switch {
@@ -34,12 +64,12 @@
 
 .switch > span {
   position: absolute;
-  top:6px;
+  top: 6px;
   pointer-events: none;
   font-weight: 700;
   font-size: 16px;
   text-transform: uppercase;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, .06);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
   width: 50%;
   text-align: center;
 }
@@ -91,7 +121,8 @@ input.check-toggle-round-flat + label {
   -o-border-radius: 60px;
   border-radius: 60px;
 }
-input.check-toggle-round-flat + label:before, input.check-toggle-round-flat + label:after {
+input.check-toggle-round-flat + label:before,
+input.check-toggle-round-flat + label:after {
   display: block;
   position: absolute;
   content: "";
@@ -102,7 +133,7 @@ input.check-toggle-round-flat + label:before {
   left: 3px;
   bottom: 3px;
   right: 3px;
-  border:1px solid rgba(61, 207, 182, 1);
+  border: 1px solid rgba(61, 207, 182, 1);
   -webkit-border-radius: 60px;
   -moz-border-radius: 60px;
   -ms-border-radius: 60px;
@@ -132,4 +163,3 @@ input.check-toggle-round-flat + label:after {
 input.check-toggle-round-flat:checked + label:after {
   margin-left: 38px;
 }
-
