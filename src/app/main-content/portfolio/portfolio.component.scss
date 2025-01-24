@@ -152,6 +152,7 @@ p {
 // Overlay for Project Details
 
 .overlay {
+  z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,3 +179,4 @@ p {
   );
   }
 }
+

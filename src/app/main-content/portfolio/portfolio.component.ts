@@ -1,6 +1,7 @@
 import { Component,HostListener } from '@angular/core';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { FormsModule } from '@angular/forms';
+import { ScrollService } from '../../scroll.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -10,17 +11,21 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
+
+constructor(private scrollService: ScrollService) {}
+
   hoveredProject : number = 0;
   clickedProject : number = 0;
 
   selectProject(project: number): void {
     this.clickedProject = project;
     console.log(this.clickedProject);
-
+    this.scrollService.disableScroll();
   }
 
   resetProjectId(): void {
     this.clickedProject = 0;
+    this.scrollService.enableScroll();
   }
 
   @HostListener('window:scroll', [])
