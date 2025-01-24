@@ -8,7 +8,7 @@
   background-image: linear-gradient(
     to bottom left,
     rgba(8, 70, 59, 1),
-    rgba(28, 28, 28, 1) 60%,
+    rgba(28, 28, 28, 1) 60%
   );
   color: #d9d9d9;
   overflow-x: hidden;
@@ -33,16 +33,15 @@
       border-radius: 100px;
       overflow-x: hidden;
 
-      >div:nth-child(1) {
+      > div:nth-child(1) {
         margin-top: 0;
-
       }
 
       &:hover {
         border: 1px solid rgba(61, 207, 182, 1);
         color: rgba(61, 207, 182, 1);
 
-        >div:nth-child(1) {
+        > div:nth-child(1) {
           animation: hoverAnimationStart 2s linear, hoverAnimation 4s infinite;
           animation-delay: 0s, 2s;
         }
@@ -103,19 +102,18 @@ h2 {
   align-items: center;
   gap: 24px;
 
-    >a:nth-child(1) {
-      width: 30px;
-      height: 48px;
-      border: 1px solid rgba(61, 207, 182, 1);
-      border-radius: 15px;
+  > a:nth-child(1) {
+    width: 30px;
+    height: 48px;
+    border: 1px solid rgba(61, 207, 182, 1);
+    border-radius: 15px;
 
-      >div:nth-child(1) {
-        animation: jump 1.5s infinite;
-      }
-
+    > div:nth-child(1) {
+      animation: jump 1.5s infinite;
     }
+  }
 
-   >div:nth-child(2) {
+  > div:nth-child(2) {
     display: flex;
     height: 240px;
     border-left: 1px solid rgba(61, 207, 182, 1);
@@ -141,76 +139,43 @@ h2 {
   align-items: center;
   width: 32px;
   gap: 24px;
-}
 
-.mail{
-  rotate: -90deg;
-  margin-bottom: 108px;
-    // height: 235px;
-    // display: flex;
-    // align-items: center;
-}
+  > a:nth-child(1) {
+    rotate: -90deg;
+    margin-bottom: 108px;
 
-.git {
-  width: 32px;
-  height: 32px;
-  background-image: url(../../../assets/img/github.svg);
-  background-position: center;
-  background-size: cover;
+    &:hover {
+      color: rgba(61, 207, 182, 1);
+    }
+  }
 
-  &:hover {
-    background-image: url(../../../assets/img/github-hover.svg);
+  > a:nth-child(2) {
+    width: 32px;
+    height: 32px;
+    background-image: url(../../../assets/img/github.svg);
+    background-position: center;
+    background-size: cover;
+
+    &:hover {
+      background-image: url(../../../assets/img/github-hover.svg);
+    }
+  }
+
+  > a:nth-child(3) {
+    width: 32px;
+    height: 32px;
+    background-image: url(../../../assets/img/linkedIn.svg);
+    background-position: center;
+    background-size: cover;
+
+    &:hover {
+      background-image: url(../../../assets/img/linkedIn-hover.svg);
+    }
+  }
+
+  > div:nth-child(4) {
+    height: 186px;
+    border-left: 1px solid rgba(61, 207, 182, 1);
   }
 }
 
-.linked {
-  width: 32px;
-  height: 32px;
-  background-image: url(../../../assets/img/linkedIn.svg);
-  background-position: center;
-  background-size: cover;
-
-  &:hover {
-    background-image: url(../../../assets/img/linkedIn-hover.svg);
-  }
-}
-
-.vector-right {
-  height: 186px;
-  border-left: 1px solid rgba(61, 207, 182, 1);
-}
-
-// .banner {
-//   box-sizing: border-box;
-//   position: absolute;
-//   width: 100% !important;
-//   bottom: 40px;
-//   rotate: -3deg;
-//   overflow: hidden;
-//   height: 62px;
-//   display: flex;
-//   align-items: center;
-//   width: 110%;
-//   background-color: rgba(255, 255, 255, 0.12);
-//   backdrop-filter: blur(5px);
-//   color: rgba(61, 207, 182, 1);
-//   div {
-//     display: flex;
-//     align-items: center;
-//     gap: 64px;
-//     font-size: 32px;
-//     font-weight: 400;
-//     white-space: nowrap;
-//     animation: scroll 60s linear infinite;
-//   }
-
-// }
-
-// @keyframes scroll {
-//   0% {
-//     transform: translateX(0%); /* Start rechts außerhalb des Bildschirms */
-//   }
-//   100% {
-//     transform: translateX(-50%); /* Bewegt sich nach links außerhalb des Bildschirms */
-//   }
-// }
