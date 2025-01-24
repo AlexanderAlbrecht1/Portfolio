@@ -150,26 +150,72 @@ h2 {
   }
 
   > a:nth-child(2) {
-    width: 32px;
-    height: 32px;
-    background-image: url(../../../assets/img/github.svg);
-    background-position: center;
-    background-size: cover;
+    margin-left: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > div:nth-child(1) {
+      width: 32px;
+      height: 32px;
+      background-image: url(../../../assets/img/github.svg);
+      background-position: center;
+      background-size: cover;
+    }
+
+    > div:nth-child(2) {
+      margin-left: 8px;
+      width: 8px;
+      height: 8px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
 
     &:hover {
-      background-image: url(../../../assets/img/github-hover.svg);
+      > div:nth-child(1) {
+        background-image: url(../../../assets/img/github-hover.svg);
+      }
+
+      > div:nth-child(2) {
+        background-image: url(../../../assets/img/dot.svg);
+        transition: 0.5s ease;
+      }
     }
   }
 
   > a:nth-child(3) {
-    width: 32px;
-    height: 32px;
-    background-image: url(../../../assets/img/linkedIn.svg);
-    background-position: center;
-    background-size: cover;
+    margin-left: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > div:nth-child(1) {
+      width: 32px;
+      height: 32px;
+      background-image: url(../../../assets/img/linkedIn.svg);
+      background-position: center;
+      background-size: cover;
+    }
+
+    > div:nth-child(2) {
+      margin-left: 8px;
+      width: 8px;
+      height: 8px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
 
     &:hover {
-      background-image: url(../../../assets/img/linkedIn-hover.svg);
+      > div:nth-child(1) {
+        background-image: url(../../../assets/img/linkedIn-hover.svg);
+      }
+
+      > div:nth-child(2) {
+        background-image: url(../../../assets/img/dot.svg);
+        transition: 0.5s ease;
+      }
     }
   }
 
@@ -178,4 +224,3 @@ h2 {
     border-left: 1px solid rgba(61, 207, 182, 1);
   }
 }
-
