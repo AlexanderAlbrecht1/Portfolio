@@ -4,9 +4,38 @@
   align-items: center;
   justify-content: flex-start;
   width: 104px;
-  height: 116px;
-  mar
-  img {
+  height: 125px;
+
+  img:nth-child(1) {
+    padding: 3px 0;
+    width: 60px;
+    height: 60px;
+  }
+  p {
+    margin-top: 8px;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 400s;
+    text-align: center;
+  }
+
+  &:hover img {
+    padding: 0;
+    width: 66px;
+    height: 66px;
+  }
+}
+
+.mindset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 104px;
+  height: 125px;
+
+  img:nth-child(1) {
+    padding: 3px 0;
     width: 60px;
     height: 60px;
   }

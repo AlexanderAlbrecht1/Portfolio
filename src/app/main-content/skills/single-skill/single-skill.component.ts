@@ -48,9 +48,6 @@ export class SingleSkillComponent {
   },  {
     name : 'Scrum',
     icon : 'scrum.svg'
-  },  {
-    name : 'Growth mindset',
-    icon : 'growthMindset.svg'
   }
 ]
 }
