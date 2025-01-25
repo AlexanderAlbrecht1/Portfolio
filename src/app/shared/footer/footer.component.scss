@@ -18,6 +18,10 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+
+      &:hover {
+        background-image: url(../../../assets/img/logo_hohl.svg);
+      }
     }
 
     > div:nth-child(2) {
