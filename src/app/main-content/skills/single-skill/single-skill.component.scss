@@ -31,6 +31,19 @@ div {
 }
 
 .mindset {
+  position: relative;
+
+  >div:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: -120px;
+    right: -80px;
+    background-image: url(../../../../assets/img/icons_skillset/react-vue.svg);
+    width: 188px !important;
+    height: 129px !important;
+    visibility: hidden;
+  }
 
   &:hover img {
     padding: 0;
@@ -41,6 +54,11 @@ div {
   &:hover p {
     color: rgba(61, 207, 182, 1);
     transition: .5s ease;
+  }
+
+  &:hover div:nth-child(3) {
+    visibility: visible;
+    transition: 1s ease;
   }
 }
 
