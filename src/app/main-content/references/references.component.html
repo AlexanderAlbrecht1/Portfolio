@@ -1,17 +1,49 @@
-<div class="references-wrapper">
+<!-- <div class="references-wrapper">
   <h2 class="fira-code">What my colleagues say about me</h2>
   <app-single-comment class="references-interaction"> </app-single-comment>
   <img src="/assets/img/quotes.svg" alt="" />
   <div class="linear-gradient"></div>
   <div class="swipe-wrapper">
-    <div class="swipe-left">
-    </div>
+    <div class="swipe-left"></div>
     <div class="dots">
       <div class="dot"></div>
       <div class="dot"></div>
       <div class="dot"></div>
     </div>
-    <div class="swipe-right">
+    <div class="swipe-right"></div>
+  </div>
+</div> -->
+
+
+<div class="references-wrapper">
+  <h2 class="fira-code">What my colleagues say about me</h2>
+
+  <!-- Carousel -->
+  <div class="carousel">
+    <div
+      class="comment-box"
+      *ngFor="let feedback of getVisibleFeedback(); let i = index"
+      [class.active]="i === 1"
+    >
+      <p>{{ feedback.comment }}</p>
+      <div>
+        <div></div>
+        <span>{{ feedback.name }} - {{ feedback.role }}</span>
+      </div>
     </div>
+  </div>
+
+  <!-- Steuerung -->
+  <div class="swipe-wrapper">
+    <div class="swipe-left" (click)="previous()"></div>
+    <div class="dots">
+      <div
+        *ngFor="let feedback of feedbackList; let i = index"
+        class="dot"
+        [class.active]="i === currentIndex"
+        (click)="goToIndex(i)"
+      ></div>
+    </div>
+    <div class="swipe-right" (click)="next()"></div>
   </div>
 </div>
