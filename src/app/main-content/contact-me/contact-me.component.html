@@ -73,7 +73,7 @@
       </div>
 
       @if (name.valid && email.valid && message.valid && !privacyPolicy.valid) {
-        <span class="errCom">Please accept the privacy policy</span>
+        <span class="advice">Please accept the privacy policy</span>
       }
 
       <input class="send-btn" type="submit" value="Say Hello!" [disabled]="!contactForm.valid" />

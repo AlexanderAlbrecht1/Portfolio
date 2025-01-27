@@ -69,7 +69,7 @@ export class ContactMeComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      console.log(this.contactData);
+      console.table(this.contactData);
 
       ngForm.resetForm();
     }
