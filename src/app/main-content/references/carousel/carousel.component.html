@@ -1,0 +1,31 @@
+<!-- Carousel -->
+<div class="carousel">
+  <div
+    class="comment-box"
+    *ngFor="let feedback of getVisibleFeedback(); let i = index"
+    [class.active]="i === 1"
+    [class.prev]="i === 0"
+    [class.next]="i === 2"
+  >
+    <img class="quotation" src="/assets/img/quotes.svg" alt="quotation marks" />
+    <p>{{ feedback.comment }}</p>
+    <div>
+      <div></div>
+      <span>{{ feedback.name }} - {{ feedback.role }}</span>
+    </div>
+  </div>
+</div>
+<!-- <img class="quotation" src="/assets/img/quotes.svg" alt="quotation marks" /> -->
+<!-- swipe -->
+<div class="swipe-wrapper">
+  <div class="swipe-left" (click)="previous()"></div>
+  <div class="dots">
+    <div
+      *ngFor="let feedback of feedbackList; let i = index"
+      class="dot"
+      [class.active]="i === currentIndex"
+      (click)="goToIndex(i)"
+    ></div>
+  </div>
+  <div class="swipe-right" (click)="next()"></div>
+</div>

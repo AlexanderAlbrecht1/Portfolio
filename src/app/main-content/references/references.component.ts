@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { SingleCommentComponent } from './single-comment/single-comment.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 interface Feedback {
   id: number;
@@ -12,7 +12,7 @@ interface Feedback {
 @Component({
   selector: 'app-references',
   standalone: true,
-  imports: [CommonModule, SingleCommentComponent],
+  imports: [CommonModule, CarouselComponent],
   templateUrl: './references.component.html',
   styleUrl: './references.component.scss',
 })
@@ -43,30 +43,30 @@ export class ReferencesComponent {
   ];
 
 
-  currentIndex = 0;
+  // currentIndex = 0;
 
-  next(): void {
-    this.currentIndex = (this.currentIndex + 1) % this.feedbackList.length;
-  }
+  // next(): void {
+  //   this.currentIndex = (this.currentIndex + 1) % this.feedbackList.length;
+  // }
 
-  previous(): void {
-    this.currentIndex =
-      (this.currentIndex - 1 + this.feedbackList.length) % this.feedbackList.length;
-  }
+  // previous(): void {
+  //   this.currentIndex =
+  //     (this.currentIndex - 1 + this.feedbackList.length) % this.feedbackList.length;
+  // }
 
-  goToIndex(index: number): void {
-    this.currentIndex = index;
-  }
+  // goToIndex(index: number): void {
+  //   this.currentIndex = index;
+  // }
 
-  getVisibleFeedback() {
-    const prevIndex = (this.currentIndex - 1 + this.feedbackList.length) % this.feedbackList.length;
-    const nextIndex = (this.currentIndex + 1) % this.feedbackList.length;
+  // getVisibleFeedback() {
+  //   const prevIndex = (this.currentIndex - 1 + this.feedbackList.length) % this.feedbackList.length;
+  //   const nextIndex = (this.currentIndex + 1) % this.feedbackList.length;
 
-    return [
-      this.feedbackList[prevIndex],
-      this.feedbackList[this.currentIndex],
-      this.feedbackList[nextIndex]
-    ];
-  }
+  //   return [
+  //     this.feedbackList[prevIndex],
+  //     this.feedbackList[this.currentIndex],
+  //     this.feedbackList[nextIndex]
+  //   ];
+  // }
 
 }

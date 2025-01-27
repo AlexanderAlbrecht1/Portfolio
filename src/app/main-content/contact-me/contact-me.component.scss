@@ -1,16 +1,18 @@
 .contact-wrapper {
-  padding : 144px 96px;
+  display: flex;
+  justify-content: space-between;
+  padding: 144px 96px;
   background-color: rgba(28, 28, 28, 1);
   display: flex;
   gap: 64px;
 
-  >div:nth-child(1) {
+  > div:nth-child(1) {
     width: 568px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 
-    >span:nth-child(1) {
+    > span:nth-child(1) {
       margin-top: 0;
       margin-bottom: 20px;
       font-size: 24px;
@@ -19,7 +21,7 @@
       color: rgba(61, 207, 182, 1);
     }
 
-    >h2 {
+    > h2 {
       margin-top: 0;
       margin-bottom: 40px;
       font-size: 64px;
@@ -27,7 +29,7 @@
       color: rgba(61, 207, 182, 1);
     }
 
-    >span:nth-child(3) {
+    > span:nth-child(3) {
       margin-top: 0;
       margin-bottom: 16px;
       font-size: 24px;
@@ -36,7 +38,7 @@
       color: rgba(61, 207, 182, 1);
     }
 
-    >p:nth-child(4) {
+    > p:nth-child(4) {
       margin: 0;
       font-size: 16px;
       line-height: 19px;
@@ -44,7 +46,7 @@
       color: rgba(255, 255, 255, 1);
     }
 
-    >p:nth-child(5) {
+    > p:nth-child(5) {
       margin: 0;
       font-size: 16px;
       line-height: 19px;
@@ -53,15 +55,14 @@
     }
   }
 
-  >div:nth-child(2) {
+  > div:nth-child(2) {
     width: 616px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 
-    >form {
-
-      >div:nth-child(4) {
+    > form {
+      > div:nth-child(4) {
         flex-direction: row !important;
         padding: 32px 0 !important;
         gap: 8px !important;
@@ -71,8 +72,6 @@
         color: rgba(255, 255, 255, 1);
       }
     }
-
-
   }
 }
 
@@ -88,7 +87,7 @@
   flex-direction: column;
   padding: 32px;
   gap: 16px;
-  border-top: 1px solid rgba(61, 207, 182, .5);
+  border-top: 1px solid rgba(61, 207, 182, 0.5);
 }
 
 input {
@@ -107,9 +106,8 @@ input.ng-invalid.ng-touched::placeholder {
   color: rgba(236, 123, 123, 0.8);
 }
 
-
 ::placeholder {
-  color: rgba(255, 255, 255, .8);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 18px;
   line-height: 22px;
 }
