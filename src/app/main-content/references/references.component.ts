@@ -38,7 +38,7 @@ export class ReferencesComponent {
       name: 'Firat T.',
       role: 'Team Partner',
       comment:
-        'You have a friendly and calm demeanor, which makes you easy to work with in a team. Your structured way of working and your clean and understandable code mean that you manage to meet deadlines.',
+        'Lorem ipsum',
     }
   ];
 
