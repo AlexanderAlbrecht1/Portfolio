@@ -17,13 +17,16 @@
 
 <div class="references-wrapper">
   <h2 class="fira-code">What my colleagues say about me</h2>
-
+  <!-- <img src="/assets/img/quotes.svg" alt="" /> -->
+  <div class="linear-gradient"></div>
   <!-- Carousel -->
   <div class="carousel">
     <div
       class="comment-box"
       *ngFor="let feedback of getVisibleFeedback(); let i = index"
       [class.active]="i === 1"
+      [class.prev]="i === 0"
+      [class.next]="i === 2"
     >
       <p>{{ feedback.comment }}</p>
       <div>
@@ -32,7 +35,7 @@
       </div>
     </div>
   </div>
-
+  <img src="/assets/img/quotes.svg" alt="" />
   <!-- Steuerung -->
   <div class="swipe-wrapper">
     <div class="swipe-left" (click)="previous()"></div>

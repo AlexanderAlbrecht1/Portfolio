@@ -5,16 +5,18 @@
   align-items: center;
   background-color: rgba(28, 28, 28, 1);
   padding-top: 128px;
+  overflow-x: hidden;
 
   > img {
     position: absolute;
-    top: 208px;
-    left: 349px;
+    top: 186px;
+    // left: 349px;
   }
 }
 
 .linear-gradient {
   position: absolute;
+  z-index: 1;
   top: 216px;
   left: 0;
   right: 0;
@@ -72,22 +74,6 @@ h2 {
   }
 }
 
-// .dots {
-//   display: flex;
-//   flex-direction: row;
-//   align-items: center;
-//   gap: 8px;
-// }
-
-// .dot {
-//   width: 8px;
-//   height: 8px;
-//   background-image: url(../../../assets/img/dot_white.svg);
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-// }
-
 .swipe-right {
   width: 40px;
   height: 40px;
@@ -106,18 +92,10 @@ h2 {
   }
 }
 
-
-
-// .references-wrapper {
-//   text-align: center;
-//   position: relative;
-// }
-
 .carousel {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
   overflow: hidden;
 }
 
@@ -132,9 +110,6 @@ h2 {
   background-color: rgb(39, 83, 75);
   border: 1px solid rgba(61, 207, 182, 1);
   border-radius: 32px;
-  opacity: 0.5;
-  transform: scale(0.8);
-  transition: all 0.3s ease-in-out;
 
   >p {
     font-size: 20px;
@@ -164,6 +139,12 @@ h2 {
 .comment-box.active {
   opacity: 1;
   transform: scale(1);
+}
+
+.comment-box.prev,
+.comment-box.next {
+  opacity: 0.7;
+  transform: scale(0.8);
 }
 
 .swipe-wrapper {
@@ -198,42 +179,3 @@ button {
   background: rgba(61, 207, 182, 1);
 }
 
-.comment-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  width: 632px;
-  height: 274px;
-  padding: 48px 40px;
-  background-color: rgb(39, 83, 75);
-  border: 1px solid rgba(61, 207, 182, 1);
-  border-radius: 32px;
-  opacity: 0.5;
-  transform: scale(0.8);
-  transition: all 0.3s ease-in-out;
-
-  >p {
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: 400px;
-    color: rgba(255, 255, 255, 1);
-  }
-
-  >div {
-    width: 100%;
-    gap: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    font-size: 18px;
-    line-height: 22px;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 1);
-
-    >div {
-      flex: 1;
-      border-bottom: 1px solid rgba(255, 255, 255, 1);
-    }
-  }
-}
