@@ -27,6 +27,12 @@ export class AppComponent {
 }
 
 ngOnInit(): void {
-  AOS.init();
+  AOS.init({
+    offset: 120,
+    easing: 'ease',
+    once: false,
+    mirror: false
+
+  });
 }
 }
