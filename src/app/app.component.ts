@@ -9,6 +9,7 @@ import {
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -23,5 +24,9 @@ export class AppComponent {
     this.translate.addLangs(['de', 'en']);
     this.translate.setDefaultLang('en');
     this.translate.use('en');
+}
+
+ngOnInit(): void {
+  AOS.init();
 }
 }

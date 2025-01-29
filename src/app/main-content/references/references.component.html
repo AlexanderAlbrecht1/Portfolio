@@ -1,35 +1,6 @@
-<div class="references-wrapper">
+<div class="references-wrapper" data-aos="fade-up" data-aos-duration="2000">
   <h2 class="fira-code">What my colleagues say about me</h2>
   <div class="linear-gradient"></div>
   <app-carousel [feedbackList] = "feedbackList"></app-carousel>
-<!--
-  <div class="carousel">
-    <div
-      class="comment-box"
-      *ngFor="let feedback of getVisibleFeedback(); let i = index"
-      [class.active]="i === 1"
-      [class.prev]="i === 0"
-      [class.next]="i === 2"
-    >
-      <p>{{ feedback.comment }}</p>
-      <div>
-        <div></div>
-        <span>{{ feedback.name }} - {{ feedback.role }}</span>
-      </div>
-    </div>
-  </div>
-  <img src="/assets/img/quotes.svg" alt="quotation marks" />
 
-  <div class="swipe-wrapper">
-    <div class="swipe-left" (click)="previous()"></div>
-    <div class="dots">
-      <div
-        *ngFor="let feedback of feedbackList; let i = index"
-        class="dot"
-        [class.active]="i === currentIndex"
-        (click)="goToIndex(i)"
-      ></div>
-    </div>
-    <div class="swipe-right" (click)="next()"></div>
-  </div> -->
 </div>
