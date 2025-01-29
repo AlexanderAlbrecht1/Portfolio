@@ -1,0 +1,10 @@
+{
+  "header": {
+    "about": "About me",
+    "skills": "Skills",
+    "projects": "Projects"
+  },
+  "landingPage": {
+    "job": "Frontend Developer"
+  }
+}
