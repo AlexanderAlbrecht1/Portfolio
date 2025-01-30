@@ -5,6 +5,14 @@
     "projects": "Projects"
   },
   "landingPage": {
-    "job": "Frontend Developer"
+    "job": "Frontend Developer",
+    "projects": "Check my work",
+    "contact": "Contact me"
+  },
+  "flowtext": {
+    "status":"Available for remote work",
+    "job":"Frontend Developer",
+    "location":"Based in Berlin",
+    "status2":"Open to work"
   }
 }

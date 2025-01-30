@@ -5,7 +5,7 @@
         id="language-toggle"
         class="check-toggle check-toggle-round-flat"
         type="checkbox"
-        [checked]="currentLanguage === 'de'"
+
         (change)="toggleLanguage()"
       />
       <!-- {{ currentLanguage === 'en' ? 'EN' : 'DE' }} -->
@@ -14,9 +14,9 @@
       <span class="off fira-code">DE</span>
     </div>
     <a class="fira-code" href="#about-me">{{ 'header.about' | translate }}<div></div></a>
-    <a class="fira-code" href="#skills">Skills <div></div></a>
-    <a class="fira-code" href="#projects">Projects <div></div></a>
-    <a href=""> {{ currentLanguage }}</a>
+    <a class="fira-code" href="#skills">{{ 'header.skills' | translate }}<div></div></a>
+    <a class="fira-code" href="#projects">{{ 'header.projects' | translate }} <div></div></a>
+    <!-- <a href=""> {{ currentLanguage }}</a> -->
   </div>
 
   <a href=""><img src="./assets/img/Clean Logo.png" alt="" /></a>
