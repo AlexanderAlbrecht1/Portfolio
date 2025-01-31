@@ -1,20 +1,19 @@
 <div class="contact-wrapper" id="contact">
   <div>
-    <span>Contact me</span>
-    <h2 class="fira-code">Let's work together!</h2>
-    <span class="fira-code">Got a problem to solve?</span>
-    <p>
-      Contact me through this form, I am interested in hearing from you, knowing
-      your ideas and contributing to your projects with my work. <br />
+    <span>{{ 'contact-me.head' | translate}}</span>
+    <h2 class="fira-code">{{ 'contact-me.head2' | translate}}!</h2>
+    <span class="fira-code">{{ 'contact-me.head3' | translate}}?</span>
+    <p>{{ 'contact-me.text' | translate}}
+       <br />
       <br />
-      Need a Frontend developer?
+      {{ 'contact-me.text2' | translate}} ?
     </p>
-    <p>Let’s talk!</p>
+    <p>{{ 'contact-me.text3' | translate}}</p>
   </div>
   <div>
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
       <div class="form-group">
-        <label class="fira-code label" for="name">What's your name?</label>
+        <label class="fira-code label" for="name">{{ 'form.name' | translate}}?</label>
         <input
           #name="ngModel"
           minlength="2"
@@ -28,7 +27,7 @@
       </div>
       <div class="form-group">
         <label class="fira-code label" for="name" for="email"
-          >What's your email?</label
+          >{{ 'form.mail' | translate}}?</label
         >
         <input
           #email="ngModel"
@@ -43,7 +42,7 @@
       </div>
       <div class="form-group">
         <label class="fira-code label" for="name" for="message"
-          >How can I help you?</label
+          >{{ 'form.message' | translate}}?</label
         >
         <input
           #message="ngModel"

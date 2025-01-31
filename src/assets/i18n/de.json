@@ -1,18 +1,62 @@
 {
-  "header": {
-    "about": "Über mich",
-    "skills": "Fähigkeiten",
-    "projects": "Projekte"
+	"about-me": {
+		"head1": "Wer ich bin",
+		"head2": "Über mich",
+		"intro": "Hi, ich bin Alex, 36 Jahre alt und ein deutschsprachiger Frontend-Entwickler aus Berlin. Motiviert von den grenzenlosen Möglichkeiten in der IT bin ich begeistert von der Gestaltung visuell ansprechender und intuitiver Websites und Anwendungen.",
+		"top1": "Ich bin hinsichtlich meiner Arbeitsumgebung flexibel bin, daher kann ich sowohl vor Ort in Berlin im Büro als auch remote effektiv arbeiten.",
+		"top2": "Ich bin aufgeschlossen gegenüber neuen Aufgaben und suche immer nach neuen Herausforderungen, um mein Wissen und meine Fähigkeiten zu festigen und stetig zu erweitern.",
+		"top3": "In meinem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben; es ist eine kreative Form der Problemlösung. Ich bin stolz auf meine Fähigkeit, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu destillieren. Auf diese Weise helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken."
+	},
+	"feedback": {
+		"head": "Was meine Kolleg*innen über mich sagen",
+		"quote1": "Du hast eine freundliche und ruhige Ausstrahlung, dadurch kann man mit dir gut im Team arbeiten. Durch deine strukturierte Arbeitsweise und deinen cleanen und verständlichen Code, schaffst du es die Deadlines einzuhalten.",
+		"quote2": "Ein sehr aktiver Partner im Team, der mit konstruktiven Ideen überzeugt. Seine Umsetzungen waren schnell und zuverlässig. Wer Alexander im Team hat, kann sicher sein, dass das Projekt nicht nur gelingt, sondern auch gut wird. Die Zusammenarbeit mit ihm hat mir großen Spaß gemacht, und ich würde jederzeit wieder gerne in einem Team mit ihm arbeiten."
+	},
+	"flowtext": {
+		"job": "Frontend Entwickler",
+		"location": "Sitz in Berlin",
+		"status": "Für remote Arbeit verfügbar",
+		"status2": "Offen für Jobangebote"
+	},
+	"header": {
+		"about": "Über mich",
+		"projects": "Projekte",
+		"skills": "Fähigkeiten"
+	},
+	"landingPage": {
+		"contact": "Schreib mir",
+		"job": "Frontend Entwickler",
+		"projects": "Meine Projekte"
+	},
+	"portfolio": {
+		"head1": "Ausgewählte Projekte",
+		"project.head": "Worum geht es?",
+		"project1": "Aufgabenmanager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag & Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
+		"project2": "Sharkie ist ein kleines „Jump and Run“-Spiel mit objektorientiertem Ansatz. Weiche Feinden aus, sammle Gegenstände und besiege den Endgegner.",
+		"project3": "Ein Pokémon-Trainer-Register, das dynamisch Daten von einer API abruft und anzeigt.",
+		"switch": "Nächstes Projekt",
+		"text1": "Entdecken Sie hier eine Auswahl meiner Arbeiten. Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen."
+	},
+	"skillset": {
+		"btn": "Lassen Sie uns reden",
+		"head1": "Technologien",
+		"head2": "Fähigkeiten",
+		"head3.1": "Sie benötigen eine ",
+		"head3.2": "andere Fähigkeit?",
+		"text1": "Auf meinem Weg habe ich an verschiedenen Projekten gearbeitet und dabei eine Reihe von Frontend-Technologien und -Konzepten gelernt und erfolgreich eingesetzt. Ich bin offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Landschaft der Webentwicklung an der Spitze zu bleiben.",
+		"text2": "Nehmen Sie gerne Kontakt mit mir auf. Ich freue mich darauf, meine bisherigen Kenntnisse zu erweitern."
+	},
+  "contact-me": {
+    "head": "Melden Sie sich bei mir",
+    "head2": "Lassen Sie uns zusammenarbeiten ",
+    "head3": "Sie haben ein Problem zu lösen",
+    "text": "Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen.",
+    "text2": "Sie brauchen einen Frotend Entwickler",
+    "text3": "Lassen Sie uns reden"
   },
-  "landingPage": {
-    "job": "Frontend Entwickler",
-    "projects": "Meine Projekte",
-    "contact": "Schreib mir"
-  },
-  "flowtext": {
-    "status":"Für remote Arbeit verfügbar",
-    "job":"Frontend Entwickler",
-    "location":"Sitz in Berlin",
-    "status2":"Offen für Jobangebote"
+  "form": {
+    "name": "Wie ist Ihr Name",
+    "mail": "Wie ist Ihre Email",
+    "message": "Wie kann ich Ihnen helfen?"
   }
 }

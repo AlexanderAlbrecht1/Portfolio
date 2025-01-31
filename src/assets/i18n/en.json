@@ -1,18 +1,57 @@
 {
-  "header": {
-    "about": "About me",
-    "skills": "Skills",
-    "projects": "Projects"
-  },
-  "landingPage": {
-    "job": "Frontend Developer",
-    "projects": "Check my work",
-    "contact": "Contact me"
-  },
-  "flowtext": {
-    "status":"Available for remote work",
-    "job":"Frontend Developer",
-    "location":"Based in Berlin",
-    "status2":"Open to work"
+	"about-me": {
+		"head1": "Who I am",
+		"head2": "About me",
+		"intro": "Hi, I'm Alex, 36 years old and a German-speaking frontend developer from Berlin. Motivated by the limitless possibilities in IT, I am passionate about creating visually appealing and intuitive websites and applications.",
+		"top1": "I am flexible in terms of my working environment, so I can work effectively both on site in the office in Berlin and remotely.",
+		"top2": "I am open to new tasks and am always looking for new challenges to consolidate and constantly expand my knowledge and skills.",
+		"top3": "In my job, programming isn't just about writing code; it's a creative form of problem solving. I pride myself on my ability to distill complex technical challenges into simple, user-friendly solutions. In this way, I help you achieve your goals and bring your visions to life."
+	},
+	"feedback": {
+		"head": "What my colleagues say about me",
+		"quote1": "You have a friendly and calm personality, which makes you easy to work with in a team. Thanks to your structured way of working and your clean and understandable code, you manage to meet deadlines.",
+		"quote2": "A very active partner in the team who convinces with constructive ideas. His implementations were fast and reliable. If you have Alexander in your team, you can be sure that the project will not only succeed, but also turn out well. I really enjoyed working with him and would happily work in a team with him again at any time."
+	},
+	"flowtext": {
+		"job": "Frontend Developer",
+		"location": "Based in Berlin",
+		"status": "Available for remote work",
+		"status2": "Open to work"
+	},
+	"header": {
+		"about": "About me",
+		"projects": "Projects",
+		"skills": "Skills"
+	},
+	"landingPage": {
+		"contact": "Contact me",
+		"job": "Frontend Developer",
+		"projects": "Check my work"
+	},
+	"portfolio": {
+		"head1": "Selected projects",
+		"project.head": "What is it about?",
+		"project1": "Task manager inspired by the Kanban system. Create and organize tasks with drag & drop functions, assign users and categories.",
+		"project2": "Sharkie is a small \"jump and run\" game with an object-oriented approach. Dodge enemies, collect items and defeat the final boss.",
+		"project3": "A Pokémon Trainer registry that dynamically retrieves and displays data from an API.",
+		"switch": "Next project",
+		"text1": "Discover a selection of my work here. Interact with projects to see my skills in action."
+	},
+	"skillset": {
+		"btn": "Let's talk",
+		"head1": "Technologies",
+		"head2": "Skills",
+		"head3.1": "You need a",
+		"head3.2": "other ability?",
+		"text1": "Along the way, I have worked on various projects, learning and successfully utilizing a range of front-end technologies and concepts. I am open to new technologies and methodologies to continuously improve my skills and stay ahead in the ever-evolving landscape of web development.",
+		"text2": "Please feel free to contact me. I look forward to expanding my existing knowledge."
+	},
+  "contact-me": {
+    "head": "Contact me",
+    "head2": "Let's work together",
+    "head3": "You have a problem to solve",
+    "text": "Get in touch with me through this form. I am interested in hearing from you, getting to know your ideas, and contributing to your projects with my work.",
+    "text2": "You need a frontend developer",
+    "text3": "Let's talk"
   }
 }
