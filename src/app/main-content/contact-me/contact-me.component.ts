@@ -1,5 +1,5 @@
 import { FormsModule, NgForm, NgModel } from '@angular/forms';
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
@@ -12,6 +12,8 @@ import { TranslatePipe } from '@ngx-translate/core';
   styleUrl: './contact-me.component.scss'
 })
 export class ContactMeComponent {
+
+  // @Input() currentLangauge: string
 
   http = inject(HttpClient)
 
@@ -38,7 +40,7 @@ export class ContactMeComponent {
 
   getMessagePlaceholder(name : NgModel): string {
     if (!name.valid && name.touched) {
-      return 'What do you want to know?';
+        return 'What do you want to know?';
     }
     return "Hey Alex, I am interessted in ...";
   }
@@ -46,7 +48,7 @@ export class ContactMeComponent {
   mailTest = true;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://alexander-albrecht.dev/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {

@@ -10,7 +10,8 @@
 	"feedback": {
 		"head": "Was meine Kolleg*innen über mich sagen",
 		"quote1": "Du hast eine freundliche und ruhige Ausstrahlung, dadurch kann man mit dir gut im Team arbeiten. Durch deine strukturierte Arbeitsweise und deinen cleanen und verständlichen Code, schaffst du es die Deadlines einzuhalten.",
-		"quote2": "Ein sehr aktiver Partner im Team, der mit konstruktiven Ideen überzeugt. Seine Umsetzungen waren schnell und zuverlässig. Wer Alexander im Team hat, kann sicher sein, dass das Projekt nicht nur gelingt, sondern auch gut wird. Die Zusammenarbeit mit ihm hat mir großen Spaß gemacht, und ich würde jederzeit wieder gerne in einem Team mit ihm arbeiten."
+		"quote2": "Ein sehr aktiver Partner im Team, der mit konstruktiven Ideen überzeugt. Seine Umsetzungen waren schnell und zuverlässig. Wer Alexander im Team hat, kann sicher sein, dass das Projekt nicht nur gelingt, sondern auch gut wird. Die Zusammenarbeit mit ihm hat mir großen Spaß gemacht, und ich würde jederzeit wieder gerne in einem Team mit ihm arbeiten.",
+    "quote3": "Deine Arbeitsweise zeichnet sich durch Effizienz, Genauigkeit und den Fokus auf saubere, modulare Lösungen aus. Du analysierst Probleme gründlich und setzt Projekte strukturiert um, mit einem klaren Blick für Details und Benutzerfreundlichkeit. Besonders beeindruckend ist dein Engagement, dich in neue Technologien einzuarbeiten und kreative Lösungen zu finden."
 	},
 	"flowtext": {
 		"job": "Frontend Entwickler",
@@ -57,6 +58,8 @@
   "form": {
     "name": "Wie ist Ihr Name",
     "mail": "Wie ist Ihre Email",
-    "message": "Wie kann ich Ihnen helfen?"
+    "message": "Wie kann ich helfen?",
+    "pp1": "Ich habe die ",
+    "pp2": "gelesen und stimme der Verarbeitung meiner Daten zu."
   }
 }

@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, Output, EventEmitter, SimpleChanges, OnInit, OnDestroy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { TranslatePipe } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-project-details',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, TranslatePipe],
   templateUrl: './project-details.component.html',
   styleUrl: './project-details.component.scss'
 })

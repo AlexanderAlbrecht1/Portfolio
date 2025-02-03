@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { CarouselComponent } from './carousel/carousel.component';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { TranslationService } from '../../shared/services/translation.service';
 
 interface Feedback {
   id: number;
@@ -17,7 +19,6 @@ interface Feedback {
   styleUrl: './references.component.scss',
 })
 export class ReferencesComponent {
-
   feedbackList: Feedback[] = [
     {
       id: 1,
@@ -38,35 +39,26 @@ export class ReferencesComponent {
       name: 'Firat T.',
       role: 'Team Partner',
       comment:
-        'Lorem ipsum',
-    }
+        'Your way of working is characterized by efficiency, accuracy and a focus on clean, modular solutions. You analyze problems thoroughly and implement projects in a structured way, with a clear eye for detail and user-friendliness. Your commitment to familiarizing yourself with new technologies and finding creative solutions is particularly impressive.',
+    },
   ];
 
+  constructor(private translate: TranslateService) {}
 
-  // currentIndex = 0;
+  ngOnInit() {
+    this.loadTranslations();
+    this.translate.onLangChange.subscribe(() => {
+      this.loadTranslations();
+    });
+  }
 
-  // next(): void {
-  //   this.currentIndex = (this.currentIndex + 1) % this.feedbackList.length;
-  // }
-
-  // previous(): void {
-  //   this.currentIndex =
-  //     (this.currentIndex - 1 + this.feedbackList.length) % this.feedbackList.length;
-  // }
-
-  // goToIndex(index: number): void {
-  //   this.currentIndex = index;
-  // }
-
-  // getVisibleFeedback() {
-  //   const prevIndex = (this.currentIndex - 1 + this.feedbackList.length) % this.feedbackList.length;
-  //   const nextIndex = (this.currentIndex + 1) % this.feedbackList.length;
-
-  //   return [
-  //     this.feedbackList[prevIndex],
-  //     this.feedbackList[this.currentIndex],
-  //     this.feedbackList[nextIndex]
-  //   ];
-  // }
-
+  private loadTranslations() {
+    this.feedbackList.forEach((feedback, index) => {
+      this.translate
+        .get(`feedback.quote${feedback.id}`)
+        .subscribe((translatedText: string) => {
+          this.feedbackList[index].comment = translatedText;
+        });
+    });
+  }
 }

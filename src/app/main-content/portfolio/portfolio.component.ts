@@ -2,11 +2,12 @@ import { Component,HostListener } from '@angular/core';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { FormsModule } from '@angular/forms';
 import { ScrollService } from '../../scroll.service';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [ProjectDetailsComponent,FormsModule],
+  imports: [ProjectDetailsComponent,FormsModule, TranslatePipe],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
 })

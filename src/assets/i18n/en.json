@@ -10,7 +10,8 @@
 	"feedback": {
 		"head": "What my colleagues say about me",
 		"quote1": "You have a friendly and calm personality, which makes you easy to work with in a team. Thanks to your structured way of working and your clean and understandable code, you manage to meet deadlines.",
-		"quote2": "A very active partner in the team who convinces with constructive ideas. His implementations were fast and reliable. If you have Alexander in your team, you can be sure that the project will not only succeed, but also turn out well. I really enjoyed working with him and would happily work in a team with him again at any time."
+		"quote2": "A very active partner in the team who convinces with constructive ideas. His implementations were fast and reliable. If you have Alexander in your team, you can be sure that the project will not only succeed, but also turn out well. I really enjoyed working with him and would happily work in a team with him again at any time.",
+    "quote3": "Your way of working is characterized by efficiency, accuracy and a focus on clean, modular solutions. You analyze problems thoroughly and implement projects in a structured way, with a clear eye for detail and user-friendliness. Your commitment to familiarizing yourself with new technologies and finding creative solutions is particularly impressive."
 	},
 	"flowtext": {
 		"job": "Frontend Developer",
@@ -53,5 +54,13 @@
     "text": "Get in touch with me through this form. I am interested in hearing from you, getting to know your ideas, and contributing to your projects with my work.",
     "text2": "You need a frontend developer",
     "text3": "Let's talk"
+  },
+  "form": {
+    "name": "What's your name",
+    "mail": "What's your email",
+    "message": "How can I help you?",
+    "pp1": "I've read the ",
+    "pp2": "and agree to the processing of my data as outlined.",
+    "ph_name":"Hey Alex, I am interessted in ..."
   }
 }
