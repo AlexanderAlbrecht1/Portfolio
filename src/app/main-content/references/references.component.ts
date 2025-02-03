@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { CarouselComponent } from './carousel/carousel.component';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { TranslationService } from '../../shared/services/translation.service';
+
 
 interface Feedback {
   id: number;
@@ -14,7 +14,7 @@ interface Feedback {
 @Component({
   selector: 'app-references',
   standalone: true,
-  imports: [CommonModule, CarouselComponent],
+  imports: [CommonModule, CarouselComponent, TranslatePipe],
   templateUrl: './references.component.html',
   styleUrl: './references.component.scss',
 })

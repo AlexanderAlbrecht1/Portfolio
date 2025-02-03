@@ -3,6 +3,7 @@ import { Component, inject, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact-me',
@@ -24,25 +25,48 @@ export class ContactMeComponent {
     privacyPolicy: false,
   }
 
-  getNamePlaceholder(name : NgModel): string {
-    if (!name.valid && name.touched) {
-      return 'Oops! You forgot your name!';
-    }
-    return "What's your name?";
+  placeholders = {
+    name: '',
+    email: '',
+    message: ''
+  };
+
+  constructor(private translate: TranslateService) {}
+
+  ngOnInit() {
+    this.loadPlaceholders();
+
+    // Falls sich die Sprache ändert, sollen die Platzhalter neu geladen werden
+    this.translate.onLangChange.subscribe(() => {
+      this.loadPlaceholders();
+    });
   }
 
-  getMailPlaceholder(name : NgModel): string {
-    if (!name.valid && name.touched) {
-      return 'Hoppla! I need your email to answer you!';
-    }
-    return "youremail@mail.com";
+  private loadPlaceholders() {
+    this.translate.get('form.placeholder.name').subscribe(text => this.placeholders.name = text);
+    this.translate.get('form.placeholder.email').subscribe(text => this.placeholders.email = text);
+    this.translate.get('form.placeholder.message').subscribe(text => this.placeholders.message = text);
   }
 
-  getMessagePlaceholder(name : NgModel): string {
+  getNamePlaceholder(name: NgModel): string {
     if (!name.valid && name.touched) {
-        return 'What do you want to know?';
+      return this.translate.instant('form.placeholder.nameError');
     }
-    return "Hey Alex, I am interessted in ...";
+    return this.placeholders.name;
+  }
+
+  getMailPlaceholder(email: NgModel): string {
+    if (!email.valid && email.touched) {
+      return this.translate.instant('form.placeholder.emailError');
+    }
+    return this.placeholders.email;
+  }
+
+  getMessagePlaceholder(message: NgModel): string {
+    if (!message.valid && message.touched) {
+      return this.translate.instant('form.placeholder.messageError');
+    }
+    return this.placeholders.message;
   }
 
   mailTest = true;

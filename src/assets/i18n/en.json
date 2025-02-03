@@ -61,6 +61,14 @@
     "message": "How can I help you?",
     "pp1": "I've read the ",
     "pp2": "and agree to the processing of my data as outlined.",
-    "ph_name":"Hey Alex, I am interessted in ..."
+    "ph_name":"Hey Alex, I am interessted in ...",
+    "placeholder": {
+      "name": "What's your name?",
+      "nameError": "Oops! You forgot your name!",
+      "email": "youremail@mail.com",
+      "emailError": "Hoppla! I need your email to answer you!",
+      "message": "Hey Alex, I am interested in ...",
+      "messageError": "What do you want to know?"
+    }
   }
 }

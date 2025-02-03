@@ -60,6 +60,15 @@
     "mail": "Wie ist Ihre Email",
     "message": "Wie kann ich helfen?",
     "pp1": "Ich habe die ",
-    "pp2": "gelesen und stimme der Verarbeitung meiner Daten zu."
+    "pp2": "gelesen und stimme der Verarbeitung meiner Daten zu.",
+    "placeholder": {
+      "name": "Wie heißt du?",
+      "nameError": "Ups! Du hast deinen Namen vergessen!",
+      "email": "deinemail@mail.com",
+      "emailError": "Hoppla! Ich brauche deine E-Mail, um zu antworten!",
+      "message": "Hey Alex, ich interessiere mich für ...",
+      "messageError": "Was möchtest du wissen?"
+    }
   }
+
 }
