@@ -23,8 +23,6 @@ import { CustomCursorComponent } from './shared/custom-cursor/custom-cursor.comp
   imports: [
     CommonModule,
     RouterOutlet,
-    TranslatePipe,
-    TranslateDirective,
     FormsModule,
     HeaderComponent,
     FooterComponent,
@@ -36,6 +34,7 @@ import { CustomCursorComponent } from './shared/custom-cursor/custom-cursor.comp
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
+
   title = 'portfolio';
 
   constructor() {

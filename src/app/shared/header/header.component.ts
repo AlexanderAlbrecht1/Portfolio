@@ -13,6 +13,8 @@ export class HeaderComponent {
 
   currentLanguage: string;
 
+  isChecked = false;
+
   constructor(private translationService: TranslationService) {
     this.currentLanguage = this.translationService.currentLanguage;
   }
@@ -21,6 +23,8 @@ export class HeaderComponent {
     const newLang = this.currentLanguage === 'en' ? 'de' : 'en';
     this.translationService.switchLanguage(newLang);
     this.currentLanguage = newLang;
+    console.log(this.currentLanguage);
+
   }
 
 }
