@@ -69,6 +69,12 @@
       "message": "Hey Alex, ich interessiere mich für ...",
       "messageError": "Was möchtest du wissen?"
     }
+  },
+  "footer": {
+    "job":"Frontend Entwickler",
+    "location": "Berlin Deutschland",
+    "imprint": "Impressum",
+    "pp": "Datenschutzerklärung"
   }
 
 }

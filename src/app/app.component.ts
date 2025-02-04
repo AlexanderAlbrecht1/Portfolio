@@ -14,6 +14,7 @@ import * as AOS from 'aos';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslationService } from './shared/services/translation.service';
 import { MainContentComponent } from './main-content/main-content.component';
+import { CustomCursorComponent } from './shared/custom-cursor/custom-cursor.component';
 
 
 @Component({
@@ -29,6 +30,7 @@ import { MainContentComponent } from './main-content/main-content.component';
     FooterComponent,
     HttpClientModule,
     TranslateModule,
+    CustomCursorComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

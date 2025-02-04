@@ -70,5 +70,11 @@
       "message": "Hey Alex, I am interested in ...",
       "messageError": "What do you want to know?"
     }
+  },
+  "footer": {
+    "job":"Frontend Developer",
+    "location": "Berlin Germany",
+    "imprint": "Imprint",
+    "pp": "Privacy Policiy"
   }
 }

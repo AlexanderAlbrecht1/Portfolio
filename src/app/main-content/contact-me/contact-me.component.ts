@@ -35,8 +35,6 @@ export class ContactMeComponent {
 
   ngOnInit() {
     this.loadPlaceholders();
-
-    // Falls sich die Sprache ändert, sollen die Platzhalter neu geladen werden
     this.translate.onLangChange.subscribe(() => {
       this.loadPlaceholders();
     });
