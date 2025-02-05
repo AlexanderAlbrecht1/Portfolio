@@ -5,12 +5,11 @@ import { SkillsComponent } from "./skills/skills.component";
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ReferencesComponent } from './references/references.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
-import { PrivacyPolicyComponent } from "../privacy-policy/privacy-policy.component";
 
 @Component({
   selector: 'app-main-content',
   standalone: true,
-  imports: [LandingPageComponent, AboutMeComponent, SkillsComponent, PortfolioComponent, ReferencesComponent, ContactMeComponent, PrivacyPolicyComponent],
+  imports: [LandingPageComponent, AboutMeComponent, SkillsComponent, PortfolioComponent, ReferencesComponent, ContactMeComponent],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss'
 })

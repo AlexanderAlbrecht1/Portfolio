@@ -5,7 +5,7 @@
         id="language-toggle"
         class="check-toggle check-toggle-round-flat"
         type="checkbox"
-
+        [checked]="isChecked"
         (change)="toggleLanguage()"
       />
       <!-- {{ currentLanguage === 'en' ? 'EN' : 'DE' }} -->
