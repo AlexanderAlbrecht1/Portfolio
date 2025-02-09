@@ -13,15 +13,16 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $json = file_get_contents('php://input');
             //parse the Payload from text format to Object
             $params = json_decode($json);
-    
+
             $email = $params->email;
             $name = $params->name;
             $message = $params->message;
-    
-            $recipient = 'DEINE@MAIL.de';  
+            $pp = $params ->privacyPolicy;
+
+            $recipient = 'alexander.albrecht1@gmail.com';
             $subject = "Contact From <$email>";
-            $message = "From:" . $name . "<br>" . $message ;
-    
+            $message = "From:" . $name . "<br>" . $message . "<br>" . $pp  ;
+
             $headers   = array();
             $headers[] = 'MIME-Version: 1.0';
             $headers[] = 'Content-type: text/html; charset=utf-8';
@@ -34,4 +35,4 @@ switch ($_SERVER['REQUEST_METHOD']) {
         default: //Reject any non POST or OPTIONS requests.
             header("Allow: POST", true, 405);
             exit;
-    } 
+    }

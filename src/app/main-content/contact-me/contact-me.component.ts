@@ -10,25 +10,24 @@ import { TranslateService } from '@ngx-translate/core';
   standalone: true,
   imports: [FormsModule, CommonModule, TranslatePipe],
   templateUrl: './contact-me.component.html',
-  styleUrl: './contact-me.component.scss'
+  styleUrl: './contact-me.component.scss',
 })
 export class ContactMeComponent {
-
   // @Input() currentLangauge: string
 
-  http = inject(HttpClient)
+  http = inject(HttpClient);
 
   contactData = {
-    name : '',
-    email : '',
-    message : '',
+    name: '',
+    email: '',
+    message: '',
     privacyPolicy: false,
-  }
+  };
 
   placeholders = {
     name: '',
     email: '',
-    message: ''
+    message: '',
   };
 
   constructor(private translate: TranslateService) {}
@@ -41,9 +40,15 @@ export class ContactMeComponent {
   }
 
   private loadPlaceholders() {
-    this.translate.get('form.placeholder.name').subscribe(text => this.placeholders.name = text);
-    this.translate.get('form.placeholder.email').subscribe(text => this.placeholders.email = text);
-    this.translate.get('form.placeholder.message').subscribe(text => this.placeholders.message = text);
+    this.translate
+      .get('form.placeholder.name')
+      .subscribe((text) => (this.placeholders.name = text));
+    this.translate
+      .get('form.placeholder.email')
+      .subscribe((text) => (this.placeholders.email = text));
+    this.translate
+      .get('form.placeholder.message')
+      .subscribe((text) => (this.placeholders.message = text));
   }
 
   getNamePlaceholder(name: NgModel): string {
@@ -67,10 +72,10 @@ export class ContactMeComponent {
     return this.placeholders.message;
   }
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
-    endPoint: 'https://alexander-albrecht.dev/sendMail.php',
+    endPoint: 'https://alexander-albrecht.dev/api/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -82,10 +87,12 @@ export class ContactMeComponent {
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+      this.http
+        .post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
         .subscribe({
           next: (response) => {
-
+            // funktion userfeddback einfügen
+            console.table(this.contactData);
             ngForm.resetForm();
           },
           error: (error) => {
@@ -99,5 +106,4 @@ export class ContactMeComponent {
       ngForm.resetForm();
     }
   }
-
 }
