@@ -1,6 +1,6 @@
 import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { Component, inject, Input } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
 import { TranslateService } from '@ngx-translate/core';
@@ -13,9 +13,6 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrl: './contact-me.component.scss',
 })
 export class ContactMeComponent {
-  // @Input() currentLangauge: string
-
-  http = inject(HttpClient);
 
   contactData = {
     name: '',
@@ -30,7 +27,7 @@ export class ContactMeComponent {
     message: '',
   };
 
-  constructor(private translate: TranslateService) {}
+  constructor(private translate: TranslateService, private http: HttpClient) {}
 
   ngOnInit() {
     this.loadPlaceholders();
@@ -73,37 +70,47 @@ export class ContactMeComponent {
   }
 
   mailTest = false;
-
-  post = {
-    endPoint: 'https://alexander-albrecht.dev/api/sendMail.php',
-    body: (payload: any) => JSON.stringify(payload),
-    options: {
-      headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
-      },
-    },
-  };
+  apiUrl = 'https://alexander-albrecht.dev/api/sendMail.php';
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http
-        .post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
+        .post<{ success: boolean; message?: string; error?: string }>(
+          this.apiUrl,
+          this.contactData,
+          {
+            headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+            responseType: 'json',
+          }
+        )
         .subscribe({
           next: (response) => {
-            // funktion userfeddback einfügen
-            console.table(this.contactData);
+            if (response.success) {
+              console.log('✅ Mail erfolgreich gesendet:', response.message);
+            } else {
+              console.error('⚠️ Fehler beim Senden:', response.error);
+            }
             ngForm.resetForm();
           },
           error: (error) => {
-            console.error(error);
+            console.error('❌ Fehler bei der Anfrage:', error.error?.error || 'Unbekannter Fehler');
           },
-          complete: () => console.info('send post complete'),
+          complete: () => console.info('📨 Mail-Versand abgeschlossen'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       console.table(this.contactData);
-
       ngForm.resetForm();
     }
   }
+
+
+
+  sendTestMail() {
+    this.http.post('https://alexander-albrecht.dev/api/testMail.php', {})
+      .subscribe({
+        next: (response) => console.log('Mail erfolgreich gesendet:', response),
+        error: (error) => console.error('Fehler beim Senden der Mail:', error)
+      });
+  }
+
 }
