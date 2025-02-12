@@ -146,22 +146,25 @@ p {
 }
 
 .visibil {
-  visibility: visible;
+  display: flex;
 }
 
 // Overlay for Project Details
 
 .overlay {
   z-index: 10;
-  display: flex;
+  // display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
   top: var(--scroll-y);
+  // top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  width: 100%;
+  // width: 100%;
+  max-width: 1920px;
+  // margin: auto;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   >div {
