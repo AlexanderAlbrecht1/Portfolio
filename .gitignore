@@ -42,4 +42,4 @@ testem.log
 Thumbs.db
 
 #php
-.sendMail.php
+src/app/api/sendMail.php
