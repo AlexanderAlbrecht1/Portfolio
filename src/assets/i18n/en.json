@@ -76,5 +76,8 @@
     "location": "Berlin Germany",
     "imprint": "Imprint",
     "pp": "Privacy Policiy"
+  },
+  "notification": {
+    "text":"Thank you very much for your message! The transmission was successful and I will get back to you as soon as possible."
   }
 }

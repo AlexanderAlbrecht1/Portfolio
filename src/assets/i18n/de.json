@@ -75,6 +75,9 @@
     "location": "Berlin Deutschland",
     "imprint": "Impressum",
     "pp": "Datenschutzerklärung"
+  },
+  "notification": {
+    "text":"Vielen Dank für deine Nachricht! Die Übermittlung war erfolgreich und werde mich schellstmöglich bei dir melden."
   }
 
 }
