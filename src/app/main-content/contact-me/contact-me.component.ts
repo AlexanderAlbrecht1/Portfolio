@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
 import { TranslateService } from '@ngx-translate/core';
+import { PopupNotivicationService } from '../../shared/services/popup-notivication.service';
 
 @Component({
   selector: 'app-contact-me',
@@ -27,7 +28,7 @@ export class ContactMeComponent {
     message: '',
   };
 
-  constructor(private translate: TranslateService, private http: HttpClient) {}
+  constructor(private translate: TranslateService, private http: HttpClient, private notificationService: PopupNotivicationService) {}
 
   ngOnInit() {
     this.loadPlaceholders();
@@ -69,7 +70,7 @@ export class ContactMeComponent {
     return this.placeholders.message;
   }
 
-  mailTest = false;
+  mailTest = true;
   apiUrl = 'https://alexander-albrecht.dev/api/sendMail.php';
 
   onSubmit(ngForm: NgForm) {
@@ -86,7 +87,7 @@ export class ContactMeComponent {
         .subscribe({
           next: (response) => {
             if (response.success) {
-              console.log('✅ Mail erfolgreich gesendet:', response.message);
+              this.notificationService.showNotification();
             } else {
               console.error('⚠️ Fehler beim Senden:', response.error);
             }
@@ -100,6 +101,7 @@ export class ContactMeComponent {
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       console.table(this.contactData);
       ngForm.resetForm();
+      this.notificationService.showNotification();
     }
   }
 

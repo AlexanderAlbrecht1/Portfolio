@@ -1,5 +1,6 @@
-<div class="notification-wrapper">
+<div *ngIf="isVisible$ | async" class="notification-wrapper">
   <div>
     <p>{{ "notification.text" | translate }}</p>
   </div>
+  <div class="progress-bar" [style.width.%]="progress"></div>
 </div>

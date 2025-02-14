@@ -1,5 +1,5 @@
 .notification-wrapper {
-  display: none; // on m,essage submit => display: flex
+  display: flex; // on m,essage submit => display: flex
   align-items: center;
   justify-content: center;
   background-color: rgba(28, 28, 28);
@@ -25,4 +25,14 @@
       margin: 16px;
     }
   }
+}
+
+.progress-bar {
+  height: 3px;
+  background-color: rgb(56, 203, 177);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.1s linear;
 }
