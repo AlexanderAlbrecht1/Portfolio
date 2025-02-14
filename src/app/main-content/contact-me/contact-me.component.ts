@@ -70,7 +70,7 @@ export class ContactMeComponent {
     return this.placeholders.message;
   }
 
-  mailTest = true;
+  mailTest = false;
   apiUrl = 'https://alexander-albrecht.dev/api/sendMail.php';
 
   onSubmit(ngForm: NgForm) {
