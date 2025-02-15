@@ -239,7 +239,45 @@ h2 {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
+  .right-lateral {
+    gap: 16px;
+    >a:nth-child(1) {
+      margin-bottom: unset;
+      rotate: 0deg;
+      width: 32px;
+      height: 32px;
+      background-image: url(../../../assets/img/mail_icon_green.svg);
+      background-size: 27px 21px;
+      background-position: center;
+      background-repeat: no-repeat;
 
+      &:hover {
+        background-image: url(../../../assets/img/mail_icon_white.svg);
+      }
+      >p:nth-child(1) {
+        display: none;
+      }
+
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .lateral-wapper {
+    padding: 0 32px;
+  }
+  h1 {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 576px) {
+  h2 {
+    font-size: 24px;
+  }
+  h1 {
+    font-size: 62px;
+  }
 }
 

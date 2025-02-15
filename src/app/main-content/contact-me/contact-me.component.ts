@@ -104,15 +104,4 @@ export class ContactMeComponent {
       this.notificationService.showNotification();
     }
   }
-
-
-
-  sendTestMail() {
-    this.http.post('https://alexander-albrecht.dev/api/testMail.php', {})
-      .subscribe({
-        next: (response) => console.log('Mail erfolgreich gesendet:', response),
-        error: (error) => console.error('Fehler beim Senden der Mail:', error)
-      });
-  }
-
 }

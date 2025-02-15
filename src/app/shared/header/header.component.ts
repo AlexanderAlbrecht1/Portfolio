@@ -17,14 +17,14 @@ export class HeaderComponent {
 
   constructor(private translationService: TranslationService) {
     this.currentLanguage = this.translationService.currentLanguage;
-    this.isChecked = this.currentLanguage === 'de'; // Setzt die Checkbox, wenn die Sprache 'de' ist
+    this.isChecked = this.currentLanguage === 'de';
   }
 
   toggleLanguage() {
     const newLang = this.currentLanguage === 'en' ? 'de' : 'en';
     this.translationService.switchLanguage(newLang);
     this.currentLanguage = newLang;
-    this.isChecked = newLang === 'de'; // Checkbox entsprechend setzen
+    this.isChecked = newLang === 'de';
   }
 
 }
