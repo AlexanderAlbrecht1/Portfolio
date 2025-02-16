@@ -76,7 +76,7 @@
 }
 
 h1 {
-  font-size: 110px;
+  font-size: clamp(3.875rem, 3.0179rem + 4.2857vw, 6.875rem);
   font-weight: 700;
   margin-block-start: 0;
   margin-block-end: 0;
@@ -233,12 +233,6 @@ h2 {
   }
 }
 
-@media (max-width: 1200px) {
-  h1 {
-    font-size: 84px;
-  }
-}
-
 @media (max-width: 1024px) {
   .right-lateral {
     gap: 16px;
@@ -267,17 +261,20 @@ h2 {
   .lateral-wapper {
     padding: 0 32px;
   }
-  h1 {
-    font-size: 70px;
-  }
 }
 
 @media (max-width: 576px) {
   h2 {
     font-size: 24px;
   }
-  h1 {
-    font-size: 62px;
+  .title {
+    >div:nth-child(3) {
+      gap: 24px;
+      >a {
+        padding: 10px 8px;
+      }
+    }
+
   }
 }
 
