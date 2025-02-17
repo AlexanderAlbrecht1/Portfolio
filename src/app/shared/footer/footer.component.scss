@@ -79,3 +79,43 @@ a:hover {
     background-image: url(../../../assets/img/dot.svg);
   }
 }
+
+@media (max-width: 1024px) {
+  .footer-wrapper {
+    padding: 64px 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-wrapper {
+    position: relative;
+    > div:nth-child(1) {
+      a:nth-child(1) {
+        background-image: url(../../../assets/img/logo_mobile.svg);
+        width: 75px;
+        height: 75px;
+      }
+    }
+    > div:nth-child(2) {
+      display: none;
+    }
+    > div:nth-child(3) {
+      align-items: flex-end;
+      > a {
+        gap: unset;
+      }
+    }
+  }
+}
+
+.mobile-cc {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: rgba(61, 207, 182, 1);
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+}
