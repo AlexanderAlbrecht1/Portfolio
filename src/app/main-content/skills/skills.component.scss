@@ -50,7 +50,7 @@ h3 {
 }
 
 h2 {
-  font-size: 64px;
+  font-size: clamp(2rem, 1.4286rem + 2.8571vw, 4rem);
   font-weight: 700;
   color: rgba(61, 207, 182, 1);
   margin-block-start: 0;
@@ -92,4 +92,43 @@ h4 {
   flex-wrap: wrap;
   column-gap: 72px;
   row-gap: 0;
+}
+
+@media (max-width: 1240px) {
+  .skills-overview {
+    column-gap: 32px;
+  }
+  .row {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 1024px) {
+  .skills-wrapper {
+    padding: 0 32px;
+  }
+  .skills-overview {
+    column-gap: 16px;
+    justify-content: center;
+  }
+  .skill-set-box {
+    margin-bottom: 96px;
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+  .skills-overview {
+    height: unset;
+    margin-bottom: 96px;
+  }
+}
+
+@media (max-width: 576px) {
+  .skill-set-box{
+    align-items: center;
+  }
+
 }
