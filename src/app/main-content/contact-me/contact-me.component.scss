@@ -25,7 +25,7 @@
     > h2 {
       margin-top: 0;
       margin-bottom: 40px;
-      font-size: 64px;
+      font-size: clamp(3.5rem, 3.1667rem + 0.9259vw, 4rem);
       font-weight: 700;
       color: rgba(61, 207, 182, 1);
     }
@@ -147,4 +147,35 @@ input.ng-invalid.ng-touched::placeholder {
   color: rgba(236, 123, 123, 1);
   font-size: 14px;
   line-height: 17px;
+}
+
+@media (max-width: 1240px) {
+  .contact-wrapper {
+    > div:nth-child(1) {
+      max-width: 500px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact-wrapper {
+    padding: 144px 32px;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+    >div:nth-child(1) {
+      width: unset;
+      padding: 0 32px;
+    }
+    >div:nth-child(2) {
+      width: unset;
+      padding: 0 32px
+    }
+  }
 }
