@@ -15,6 +15,7 @@
 }
 
 .linear-gradient {
+  pointer-events: none;
   position: absolute;
   z-index: 1;
   top: 216px;
