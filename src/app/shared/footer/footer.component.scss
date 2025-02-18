@@ -1,4 +1,5 @@
 .footer-wrapper {
+  position: relative;
   background-color: rgba(28, 28, 28, 1);
   padding: 64px 96px;
   display: flex;
@@ -87,8 +88,10 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+  .mobile-cc {
+    visibility: visible !important;
+  }
   .footer-wrapper {
-    position: relative;
     > div:nth-child(1) {
       a:nth-child(1) {
         background-image: url(../../../assets/img/logo_mobile.svg);
@@ -109,6 +112,7 @@ a:hover {
 }
 
 .mobile-cc {
+  visibility: hidden;
   position: absolute;
   bottom: 16px;
   left: 0;
