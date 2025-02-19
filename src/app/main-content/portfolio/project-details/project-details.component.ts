@@ -17,11 +17,11 @@ export class ProjectDetailsComponent {
 
   @Output() resetProjectEvent = new EventEmitter<void>();
 
-  ngOnChanges(changes: SimpleChanges): void {
-    if (changes['project']) {
-      console.log('Project ID updated:', this.project);
-    }
-  }
+  // ngOnChanges(changes: SimpleChanges): void {
+  //   if (changes['project']) {
+  //     console.log('Project ID updated:', this.project);
+  //   }
+  // }
 
   onResetProject(): void {
     this.resetProjectEvent.emit();

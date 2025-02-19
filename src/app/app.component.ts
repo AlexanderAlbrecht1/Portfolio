@@ -15,6 +15,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslationService } from './shared/services/translation.service';
 import { MainContentComponent } from './main-content/main-content.component';
 import { CustomCursorComponent } from './shared/custom-cursor/custom-cursor.component';
+import { LandscapeContainerComponent } from './shared/landscape-container/landscape-container.component';
 
 
 @Component({
@@ -28,7 +29,8 @@ import { CustomCursorComponent } from './shared/custom-cursor/custom-cursor.comp
     FooterComponent,
     HttpClientModule,
     TranslateModule,
-    CustomCursorComponent
+    CustomCursorComponent,
+    LandscapeContainerComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

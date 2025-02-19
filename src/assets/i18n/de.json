@@ -5,7 +5,7 @@
 		"intro": "Hi, ich bin Alex, 36 Jahre alt und ein deutschsprachiger Frontend-Entwickler aus Berlin. Motiviert von den grenzenlosen Möglichkeiten in der IT bin ich begeistert von der Gestaltung visuell ansprechender und intuitiver Websites und Anwendungen.",
 		"top1": "Ich bin hinsichtlich meiner Arbeitsumgebung flexibel bin, daher kann ich sowohl vor Ort in Berlin im Büro als auch remote effektiv arbeiten.",
 		"top2": "Ich bin aufgeschlossen gegenüber neuen Aufgaben und suche immer nach neuen Herausforderungen, um mein Wissen und meine Fähigkeiten zu festigen und stetig zu erweitern.",
-		"top3": "In meinem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben; es ist eine kreative Form der Problemlösung. Ich bin stolz auf meine Fähigkeit, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu destillieren. Auf diese Weise helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken."
+		"top3": "In meinem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben. Es ist eine kreative Form der Problemlösung. Ich bin stolz auf meine Fähigkeit, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu destillieren. Auf diese Weise helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken."
 	},
 	"feedback": {
 		"head": "Was meine Kolleg*innen über mich sagen",
@@ -36,28 +36,28 @@
 		"project2": "Sharkie ist ein kleines „Jump and Run“-Spiel mit objektorientiertem Ansatz. Weiche Feinden aus, sammle Gegenstände und besiege den Endgegner.",
 		"project3": "Ein Pokémon-Trainer-Register, das dynamisch Daten von einer API abruft und anzeigt.",
 		"switch": "Nächstes Projekt",
-		"text1": "Entdecken Sie hier eine Auswahl meiner Arbeiten. Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen."
+		"text1": "Hier siehst du eine Auswahl meiner Projekte. Interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen."
 	},
 	"skillset": {
-		"btn": "Lassen Sie uns reden",
+		"btn": "Lass uns reden",
 		"head1": "Technologien",
 		"head2": "Fähigkeiten",
-		"head3.1": "Sie benötigen eine ",
+		"head3.1": "Ihr benötigt eine ",
 		"head3.2": "andere Fähigkeit?",
 		"text1": "Auf meinem Weg habe ich an verschiedenen Projekten gearbeitet und dabei eine Reihe von Frontend-Technologien und -Konzepten gelernt und erfolgreich eingesetzt. Ich bin offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Landschaft der Webentwicklung an der Spitze zu bleiben.",
-		"text2": "Nehmen Sie gerne Kontakt mit mir auf. Ich freue mich darauf, meine bisherigen Kenntnisse zu erweitern."
+		"text2": "Melde dich gerne bei mir. Ich freue mich darauf, meine bisherigen Kenntnisse zu erweitern."
 	},
   "contact-me": {
-    "head": "Melden Sie sich bei mir",
+    "head": "Melde dich bei mir",
     "head2": "Lass uns gemeinsam arbeiten ",
-    "head3": "Sie haben ein Problem zu lösen",
-    "text": "Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen.",
-    "text2": "Sie brauchen einen Frontend Entwickler",
-    "text3": "Lassen Sie uns reden"
+    "head3": "Du hast eine Herausforderung",
+    "text": "Kontaktiere mich über dieses Formular. Ich bin daran interessiert, von dir zu hören, deine Ideen kennenzulernen und mit meiner Arbeit zu euren Projekten beizutragen.",
+    "text2": "Ihr braucht einen Frontend Entwickler",
+    "text3": "Lass uns reden"
   },
   "form": {
-    "name": "Wie ist Ihr Name",
-    "mail": "Wie ist Ihre Email",
+    "name": "Wie ist dein Name",
+    "mail": "Wie ist deine Email",
     "message": "Wie kann ich helfen?",
     "pp1": "Ich habe die ",
     "pp2": "gelesen und stimme der Verarbeitung meiner Daten zu.",
@@ -77,6 +77,7 @@
     "pp": "Datenschutzerklärung"
   },
   "notification": {
-    "text":"Vielen Dank für deine Nachricht! Die Übermittlung war erfolgreich und werde mich schellstmöglich bei dir melden."
+    "text":"Vielen Dank für deine Nachricht! Die Übermittlung war erfolgreich und werde mich schellstmöglich bei dir melden.",
+    "rotate":"Für ein optimales Erlebnis dreh dein Handy bitte in den Portraitmodus."
   }
 }

@@ -42,3 +42,8 @@ a {
   display: none;
 }
 
+@media (max-height: 430px) and (orientation: landscape) {
+  body {
+    overflow-y: hidden;
+  }
+}
