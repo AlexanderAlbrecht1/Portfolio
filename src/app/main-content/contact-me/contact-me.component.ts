@@ -14,7 +14,6 @@ import { PopupNotivicationService } from '../../shared/services/popup-notivicati
   styleUrl: './contact-me.component.scss',
 })
 export class ContactMeComponent {
-
   contactData = {
     name: '',
     email: '',
@@ -28,7 +27,11 @@ export class ContactMeComponent {
     message: '',
   };
 
-  constructor(private translate: TranslateService, private http: HttpClient, private notificationService: PopupNotivicationService) {}
+  constructor(
+    private translate: TranslateService,
+    private http: HttpClient,
+    private notificationService: PopupNotivicationService
+  ) {}
 
   ngOnInit() {
     this.loadPlaceholders();
@@ -94,14 +97,27 @@ export class ContactMeComponent {
             ngForm.resetForm();
           },
           error: (error) => {
-            console.error('❌ Fehler bei der Anfrage:', error.error?.error || 'Unbekannter Fehler');
+            console.error(
+              '❌ Fehler bei der Anfrage:',
+              error.error?.error || 'Unbekannter Fehler'
+            );
           },
-          complete: () => console.info('📨 Mail-Versand abgeschlossen'),
+          complete: () => {
+            this.playSound();
+          },
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       console.table(this.contactData);
       ngForm.resetForm();
       this.notificationService.showNotification();
+      this.playSound();
     }
+  }
+
+  playSound() {
+    const audio = new Audio();
+    audio.src = 'assets/audio/sendMail.mp3';
+    audio.load();
+    audio.play();
   }
 }
