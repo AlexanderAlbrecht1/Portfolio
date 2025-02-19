@@ -15,8 +15,6 @@ export class CustomCursorComponent {
 
   ngOnInit() {
     this.showCursor = !this.isTouchDevice();
-    console.log('touch device', this.isTouchDevice());
-
   }
 
   isTouchDevice(): boolean {
