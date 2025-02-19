@@ -266,3 +266,11 @@ p {
     margin-bottom: 0;
   }
 }
+
+@media (max-height: 800px) {
+  h2,
+  p,
+  .skill-wrapper {
+    margin-bottom: 16px;
+  }
+}
