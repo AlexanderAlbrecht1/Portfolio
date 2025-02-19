@@ -20,7 +20,6 @@ constructor(private scrollService: ScrollService) {}
 
   selectProject(project: number): void {
     this.clickedProject = project;
-    console.log(this.clickedProject);
     this.scrollService.disableScroll();
   }
 
