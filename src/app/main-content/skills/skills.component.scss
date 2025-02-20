@@ -113,7 +113,7 @@ h4 {
 
 @media (max-width: 1024px) {
   .skills-wrapper {
-    padding: 0 32px;
+    padding: 0;
   }
   .skills-overview {
     column-gap: 16px;
@@ -121,6 +121,12 @@ h4 {
   }
   .skill-set-box {
     margin-bottom: 96px;
+    max-width: unset;
+    margin-right: unset;
+  }
+  .row {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -132,11 +138,17 @@ h4 {
     height: unset;
     margin-bottom: 96px;
   }
+  .skill-set-box-container {
+    padding: 0 32px;
+  }
 }
 
 @media (max-width: 576px) {
   .skill-set-box{
     align-items: center;
+  }
+  .skill-set-box-container {
+    padding: 0 8px;
   }
 
 }
