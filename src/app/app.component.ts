@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet,RouterLink } from '@angular/router';
 import {
   TranslateService,
   TranslatePipe,
@@ -24,6 +24,7 @@ import { LandscapeContainerComponent } from './shared/landscape-container/landsc
   imports: [
     CommonModule,
     RouterOutlet,
+    RouterLink,
     FormsModule,
     HeaderComponent,
     FooterComponent,

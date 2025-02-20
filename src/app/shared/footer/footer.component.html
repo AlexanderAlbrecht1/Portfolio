@@ -1,7 +1,7 @@
 <div class="footer-wrapper">
   <!-- first child -->
   <div>
-    <a href="#landingPage"><div class="logo-wrapper"></div></a>
+    <a [routerLink]="['/']" fragment="landingPage"><div class="logo-wrapper"></div></a>
     <!-- <div class="logo-wrapper"></div> -->
     <div>
       <span>{{ "footer.job" | translate }}</span>
@@ -27,11 +27,11 @@
       ><div class="hover-wrapper"></div>
       Email</a
     >
-    <a href="imprint"
+    <a routerLink="imprint"
       ><div class="hover-wrapper"></div>
       {{ "footer.imprint" | translate }}</a
     >
-    <a href="privacyPolicy"
+    <a routerLink="privacyPolicy"
       ><div class="hover-wrapper"></div>
       {{ "footer.pp" | translate }}</a
     >
