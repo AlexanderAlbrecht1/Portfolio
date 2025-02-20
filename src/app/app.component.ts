@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet,RouterLink } from '@angular/router';
 import {
@@ -37,7 +37,8 @@ import { LandscapeContainerComponent } from './shared/landscape-container/landsc
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-
+  lastScrollTop = 0;
+  hideHeader = false;
   title = 'portfolio';
 
   constructor() {
@@ -51,5 +52,16 @@ export class AppComponent {
       once: false,
       mirror: false,
     });
+  }
+
+  @HostListener('window:scroll', [])
+  onScroll() {
+    const currentScroll = window.scrollY;
+    if (currentScroll > this.lastScrollTop) {
+      this.hideHeader = true; // Header verstecken beim Scrollen nach unten
+    } else {
+      this.hideHeader = false; // Header einblenden beim Scrollen nach oben
+    }
+    this.lastScrollTop = currentScroll;
   }
 }

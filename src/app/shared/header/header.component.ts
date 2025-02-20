@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TranslationService } from '../services/translation.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
@@ -12,6 +12,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
+  @Input() hideHeader = false;
   currentLanguage: string;
 
   isChecked = false;
