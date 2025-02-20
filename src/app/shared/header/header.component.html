@@ -1,39 +1,19 @@
 <div class="header-wrapper" [class.hidden]="hideHeader">
-  <div class="left-side-header">
-    <div class="switch">
-      <input
-        id="language-toggle"
-        class="check-toggle check-toggle-round-flat"
-        type="checkbox"
-        [checked]="isChecked"
-        (change)="toggleLanguage()"
-      />
-      <!-- {{ currentLanguage === 'en' ? 'EN' : 'DE' }} -->
-      <label for="language-toggle"></label>
-      <span class="on fira-code">EN</span>
-      <span class="off fira-code">DE</span>
-    </div>
-    <a class="fira-code" href="#about-me"
-      >{{ "header.about" | translate }}
-      <div></div
-    ></a>
-    <a class="fira-code" href="#skills"
-      >{{ "header.skills" | translate }}
-      <div></div
-    ></a>
-    <a class="fira-code" href="#projects"
-      >{{ "header.projects" | translate }}
-      <div></div
-    ></a>
-    <!-- <a href=""> {{ currentLanguage }}</a> -->
-  </div>
-
-  <div class="mobile-menu" (click)="toggleVisibility()"></div>
-
-  <a href="#landingPage"></a>
-
-  <div class="mobile-menu-dialog" *ngIf="isVisible" (click)="toggleVisibility()">
-    <div>
+  <div class="max-width">
+    <div class="left-side-header">
+      <div class="switch">
+        <input
+          id="language-toggle"
+          class="check-toggle check-toggle-round-flat"
+          type="checkbox"
+          [checked]="isChecked"
+          (change)="toggleLanguage()"
+        />
+        <!-- {{ currentLanguage === 'en' ? 'EN' : 'DE' }} -->
+        <label for="language-toggle"></label>
+        <span class="on fira-code">EN</span>
+        <span class="off fira-code">DE</span>
+      </div>
       <a class="fira-code" href="#about-me"
         >{{ "header.about" | translate }}
         <div></div
@@ -46,18 +26,44 @@
         >{{ "header.projects" | translate }}
         <div></div
       ></a>
-      <div class="switch" (click)="stopEvent($event)">
-        <input
-          id="language-toggle"
-          class="check-toggle check-toggle-round-flat"
-          type="checkbox"
-          [checked]="isChecked"
-          (change)="toggleLanguageMobile($event)"
-        />
-        <!-- {{ currentLanguage === 'en' ? 'EN' : 'DE' }} -->
-        <label for="language-toggle"></label>
-        <span class="on fira-code">EN</span>
-        <span class="off fira-code">DE</span>
+      <!-- <a href=""> {{ currentLanguage }}</a> -->
+    </div>
+
+    <div class="mobile-menu" (click)="toggleVisibility()"></div>
+
+    <a class="logo-header" href="#landingPage"></a>
+
+    <div
+      class="mobile-menu-dialog"
+      *ngIf="isVisible"
+      (click)="toggleVisibility()"
+    >
+      <div>
+        <a class="fira-code" href="#about-me"
+          >{{ "header.about" | translate }}
+          <div></div
+        ></a>
+        <a class="fira-code" href="#skills"
+          >{{ "header.skills" | translate }}
+          <div></div
+        ></a>
+        <a class="fira-code" href="#projects"
+          >{{ "header.projects" | translate }}
+          <div></div
+        ></a>
+        <div class="switch" (click)="stopEvent($event)">
+          <input
+            id="language-toggle"
+            class="check-toggle check-toggle-round-flat"
+            type="checkbox"
+            [checked]="isChecked"
+            (change)="toggleLanguageMobile($event)"
+          />
+          <!-- {{ currentLanguage === 'en' ? 'EN' : 'DE' }} -->
+          <label for="language-toggle"></label>
+          <span class="on fira-code">EN</span>
+          <span class="off fira-code">DE</span>
+        </div>
       </div>
     </div>
   </div>

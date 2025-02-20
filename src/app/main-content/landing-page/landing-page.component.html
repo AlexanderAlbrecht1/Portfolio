@@ -1,45 +1,49 @@
 <div class="landing-wrapper" id="landingPage">
+  <div class="max-width">
+    <div class="title">
+      <h2 class="fira-code">{{ "landingPage.job" | translate }}</h2>
+      <h1>Alexander Albrecht</h1>
 
-  <div class="title">
-    <h2 class="fira-code">{{ 'landingPage.job' | translate }}</h2>
-    <h1>Alexander Albrecht</h1>
+      <div>
+        <a href="#projects"
+          ><div>{{ "landingPage.projects" | translate }}</div></a
+        >
+        <a href="#contact"
+          ><div>{{ "landingPage.contact" | translate }}</div></a
+        >
+      </div>
+    </div>
+
+    <div class="lateral-wapper">
+      <div class="left-laetral">
+        <a href="#about-me">
+          <div>
+            <img src="/assets/img/scroll-down.svg" alt="jumping arrow" />
+          </div>
+        </a>
+        <div></div>
+      </div>
+      <div class="right-lateral">
+        <a href="mailto:contact@alexander-albrecht.dev">
+          <p>contact&#64;alexander-albrecht.dev</p></a
+        >
+        <a target="_blank" href="https://github.com/AlexanderAlbrecht1">
+          <div></div>
+          <div></div>
+        </a>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/alexanderalbrecht1"
+        >
+          <div></div>
+          <div></div>
+        </a>
+        <div></div>
+      </div>
+    </div>
 
     <div>
-      <a href="#projects"><div>{{ 'landingPage.projects' | translate }}</div></a>
-      <a href="#contact"><div>{{ 'landingPage.contact' | translate }}</div></a>
+      <app-flowtext></app-flowtext>
     </div>
   </div>
-
-
-  <div class="lateral-wapper">
-    <div class="left-laetral">
-      <a href="#about-me">
-        <div>
-          <img src="/assets/img/scroll-down.svg" alt="jumping arrow" />
-        </div>
-      </a>
-      <div></div>
-    </div>
-    <div class="right-lateral">
-      <a href="mailto:contact@alexander-albrecht.dev">
-        <p>contact&#64;alexander-albrecht.dev</p></a
-      >
-      <a target="_blank" href="https://github.com/AlexanderAlbrecht1">
-        <div></div>
-        <div></div>
-      </a>
-      <a target="_blank" href="https://www.linkedin.com/in/alexanderalbrecht1">
-        <div></div>
-        <div></div>
-      </a>
-      <div></div>
-    </div>
-  </div>
-
-
-  <div>
-    <app-flowtext></app-flowtext>
-  </div>
-
-
 </div>

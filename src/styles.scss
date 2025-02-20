@@ -1,8 +1,16 @@
 html {
   scroll-behavior: smooth;
-  max-width: 1920px;
-  margin: auto;
-  background-color: rgb(28, 28, 28);
+  //
+  background: linear-gradient(
+    to bottom left,
+    rgba(8, 70, 59, 1),
+    rgba(28, 28, 28, 1) 60%
+  );
+  background-attachment: fixed; // Damit der Verlauf immer im Viewport bleibt
+  background-size: cover; // Deckt den gesamten Hintergrund ab
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 body {

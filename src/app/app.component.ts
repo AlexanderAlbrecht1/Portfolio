@@ -58,9 +58,13 @@ export class AppComponent {
   onScroll() {
     const currentScroll = window.scrollY;
     if (currentScroll > this.lastScrollTop) {
-      this.hideHeader = true; // Header verstecken beim Scrollen nach unten
+      this.hideHeader = true;
     } else {
-      this.hideHeader = false; // Header einblenden beim Scrollen nach oben
+      this.hideHeader = false;
+      // setTimeout(() => {
+      //   this.hideHeader = true;
+      // }
+      // , 5000);
     }
     this.lastScrollTop = currentScroll;
   }

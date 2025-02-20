@@ -6,10 +6,10 @@
   left: 0;
   right: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   // width: 100%;
-  max-width: 1920px;
+  // max-width: 1920px;
   height: 100px;
   padding: 0 96px;
   background-image: linear-gradient(
@@ -20,13 +20,22 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 9;
   transition: transform 0.3s ease-in-out;
-  >a:nth-child(3) {
-    width: 350px;
-    height: 50px;
-    background-image: url(../../../assets/img/Clean\ Logo.png);
-    background-size: cover;
-    background-position: center;
-  }
+
+}
+
+.max-width {
+  width: 1920px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-header {
+  width: 350px;
+  height: 50px;
+  background-image: url(../../../assets/img/Clean\ Logo.png);
+  background-size: cover;
+  background-position: center;
 }
 
 .hidden {
