@@ -232,8 +232,8 @@ input.check-toggle-round-flat:checked + label:after {
   margin-left: 38px;
 }
 
-@media(max-width: 1024px) {
-  .header-wrapper {
+@media(max-width: 1060px) {
+  .max-width {
     flex-direction: row-reverse;
   }
   .left-side-header {
@@ -257,7 +257,7 @@ input.check-toggle-round-flat:checked + label:after {
 }
 
 @media (max-width: 576px) {
-.header-wrapper {
+.max-width {
   >a:nth-child(3) {
     width: 80px;
     height: 80px;
