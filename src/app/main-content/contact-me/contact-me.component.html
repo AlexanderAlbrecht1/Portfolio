@@ -1,81 +1,93 @@
-<div class="contact-wrapper" id="contact">
-  <div>
-    <span>{{ 'contact-me.head' | translate}}</span>
-    <h2 class="fira-code">{{ 'contact-me.head2' | translate}}!</h2>
-    <span class="fira-code">{{ 'contact-me.head3' | translate}}?</span>
-    <p>{{ 'contact-me.text' | translate}}
-       <br />
-      <br />
-      {{ 'contact-me.text2' | translate}} ?
-    </p>
-    <p>{{ 'contact-me.text3' | translate}}</p>
-  </div>
-  <div>
-    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-      <div class="form-group">
-        <label class="fira-code label" for="name">{{ 'form.name' | translate}}?</label>
-        <input
-          #name="ngModel"
-          minlength="2"
-          [(ngModel)]="contactData.name"
-          type="text"
-          id="name"
-          name="name"
-          [placeholder]="getNamePlaceholder(name)"
-          required
-        />
-      </div>
-      <div class="form-group">
-        <label class="fira-code label" for="name" for="email"
-          >{{ 'form.mail' | translate}}?</label
-        >
-        <input
-          #email="ngModel"
-          [(ngModel)]="contactData.email"
-          type="email"
-          id="email"
-          name="email"
-          [placeholder]="getMailPlaceholder(email)"
-          required
-          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-        />
-      </div>
-      <div class="form-group">
-        <label class="fira-code label" for="name" for="message"
-          >{{ 'form.message' | translate}}?</label
-        >
-        <input
-          #message="ngModel"
-          minlength="5"
-          [(ngModel)]="contactData.message"
-          type="text"
-          id="message"
-          name="message"
-          [placeholder]="getMessagePlaceholder(message)"
-          required
-        />
-      </div>
-      <div class="form-group">
-        <input
-          #privacyPolicy="ngModel"
-          [(ngModel)]="contactData.privacyPolicy"
-          type="checkbox"
-          id="privacyPolicy"
-          name="privacyPolicy"
-          value="privacyPolicy"
-          required
-        />
-        <label for="privacyPolicy">
-          {{ 'form.pp1' | translate}} <a class="fira-code link" href="privacyPolicy">privacy policy</a> {{ 'form.pp2' | translate}} </label
-        ><br />
-      </div>
+<div class="bg">
+  <div class="contact-wrapper" id="contact">
+    <div>
+      <span>{{ "contact-me.head" | translate }}</span>
+      <h2 class="fira-code">{{ "contact-me.head2" | translate }}!</h2>
+      <span class="fira-code">{{ "contact-me.head3" | translate }}?</span>
+      <p>
+        {{ "contact-me.text" | translate }}
+        <br />
+        <br />
+        {{ "contact-me.text2" | translate }} ?
+      </p>
+      <p>{{ "contact-me.text3" | translate }}</p>
+    </div>
+    <div>
+      <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <div class="form-group">
+          <label class="fira-code label" for="name"
+            >{{ "form.name" | translate }}?</label
+          >
+          <input
+            #name="ngModel"
+            minlength="2"
+            [(ngModel)]="contactData.name"
+            type="text"
+            id="name"
+            name="name"
+            [placeholder]="getNamePlaceholder(name)"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label class="fira-code label" for="name" for="email"
+            >{{ "form.mail" | translate }}?</label
+          >
+          <input
+            #email="ngModel"
+            [(ngModel)]="contactData.email"
+            type="email"
+            id="email"
+            name="email"
+            [placeholder]="getMailPlaceholder(email)"
+            required
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+          />
+        </div>
+        <div class="form-group">
+          <label class="fira-code label" for="name" for="message"
+            >{{ "form.message" | translate }}?</label
+          >
+          <input
+            #message="ngModel"
+            minlength="5"
+            [(ngModel)]="contactData.message"
+            type="text"
+            id="message"
+            name="message"
+            [placeholder]="getMessagePlaceholder(message)"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <input
+            #privacyPolicy="ngModel"
+            [(ngModel)]="contactData.privacyPolicy"
+            type="checkbox"
+            id="privacyPolicy"
+            name="privacyPolicy"
+            value="privacyPolicy"
+            required
+          />
+          <label for="privacyPolicy">
+            {{ "form.pp1" | translate }}
+            <a class="fira-code link" href="privacyPolicy">privacy policy</a>
+            {{ "form.pp2" | translate }} </label
+          ><br />
+        </div>
 
-      @if (name.valid && email.valid && message.valid && !privacyPolicy.valid) {
+        @if (name.valid && email.valid && message.valid && !privacyPolicy.valid)
+        {
         <span class="advice">Please accept the privacy policy</span>
-      }
+        }
 
-      <input class="send-btn" type="submit" value="Say Hello!" [disabled]="!contactForm.valid" />
-    </form>
-
+        <input
+          class="send-btn"
+          type="submit"
+          value="Say Hello!"
+          [disabled]="!contactForm.valid"
+        />
+      </form>
+    </div>
   </div>
 </div>
