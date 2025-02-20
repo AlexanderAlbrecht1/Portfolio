@@ -16,6 +16,7 @@ import { TranslationService } from './shared/services/translation.service';
 import { MainContentComponent } from './main-content/main-content.component';
 import { CustomCursorComponent } from './shared/custom-cursor/custom-cursor.component';
 import { LandscapeContainerComponent } from './shared/landscape-container/landscape-container.component';
+import { Router, NavigationEnd } from '@angular/router';
 
 
 @Component({
@@ -41,9 +42,13 @@ export class AppComponent {
   hideHeader = false;
   title = 'portfolio';
 
-  constructor() {
-
-   }
+  constructor(private router: Router) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  }
 
   ngOnInit(): void {
     AOS.init({

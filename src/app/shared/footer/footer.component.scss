@@ -1,4 +1,11 @@
+.bg {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(28, 28, 28, 1);
+}
+
 .footer-wrapper {
+  width: 1920px;
   position: relative;
   background-color: rgba(28, 28, 28, 1);
   padding: 64px 96px;

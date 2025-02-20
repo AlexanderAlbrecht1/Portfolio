@@ -1,43 +1,47 @@
-<div class="footer-wrapper">
-  <!-- first child -->
-  <div>
-    <a [routerLink]="['/']" fragment="landingPage"><div class="logo-wrapper"></div></a>
-    <!-- <div class="logo-wrapper"></div> -->
+<div class="bg">
+  <div class="footer-wrapper">
+    <!-- first child -->
     <div>
-      <span>{{ "footer.job" | translate }}</span>
-      <a target="_blank" href="https://maps.app.goo.gl/PVkniBWapjVRe8tu7"
-        ><span>{{ "footer.location" | translate }}</span></a>
+      <a [routerLink]="['/']" fragment="landingPage"
+        ><div class="logo-wrapper"></div
+      ></a>
+      <!-- <div class="logo-wrapper"></div> -->
+      <div>
+        <span>{{ "footer.job" | translate }}</span>
+        <a target="_blank" href="https://maps.app.goo.gl/PVkniBWapjVRe8tu7"
+          ><span>{{ "footer.location" | translate }}</span></a
+        >
+      </div>
+    </div>
+    <!-- second child  -->
+    <div>
+      <span class="fira-code">© Alexander Albrecht 2025</span>
+    </div>
+    <!-- third child  -->
+    <div>
+      <a target="_blank" href="https://github.com/AlexanderAlbrecht1"
+        ><div class="hover-wrapper"></div>
+        Github</a
+      >
+      <a target="_blank" href="https://www.linkedin.com/in/alexanderalbrecht1/"
+        ><div class="hover-wrapper"></div>
+        LinkedIn</a
+      >
+      <a href="#contact"
+        ><div class="hover-wrapper"></div>
+        Email</a
+      >
+      <a routerLink="imprint"
+        ><div class="hover-wrapper"></div>
+        {{ "footer.imprint" | translate }}</a
+      >
+      <a routerLink="privacyPolicy"
+        ><div class="hover-wrapper"></div>
+        {{ "footer.pp" | translate }}</a
+      >
+    </div>
+    <div class="mobile-cc">
+      <span class="fira-code">© Alexander Albrecht 2025</span>
     </div>
   </div>
-  <!-- second child  -->
-  <div>
-    <span class="fira-code">© Alexander Albrecht 2025</span>
-  </div>
-  <!-- third child  -->
-  <div>
-    <a target="_blank" href="https://github.com/AlexanderAlbrecht1"
-      ><div class="hover-wrapper"></div>
-      Github</a
-    >
-    <a target="_blank" href="https://www.linkedin.com/in/alexanderalbrecht1/"
-      ><div class="hover-wrapper"></div>
-      LinkedIn</a
-    >
-    <a href="#contact"
-      ><div class="hover-wrapper"></div>
-      Email</a
-    >
-    <a routerLink="imprint"
-      ><div class="hover-wrapper"></div>
-      {{ "footer.imprint" | translate }}</a
-    >
-    <a routerLink="privacyPolicy"
-      ><div class="hover-wrapper"></div>
-      {{ "footer.pp" | translate }}</a
-    >
-  </div>
-  <div class="mobile-cc">
-    <span class="fira-code">© Alexander Albrecht 2025</span>
-  </div>
-
 </div>

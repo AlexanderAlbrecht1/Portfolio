@@ -1,14 +1,22 @@
-.imprint-wrapper {
-  margin-top: -100px;
+.bg {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
   background-image: linear-gradient(
     to bottom left,
     rgba(8, 70, 59, 1),
     rgba(28, 28, 28, 1) 60%
   );
+}
+
+.imprint-wrapper {
+  box-sizing: border-box;
+  width: 1920px;
+  margin-top: -100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   color: #d9d9d9;
 }
 
