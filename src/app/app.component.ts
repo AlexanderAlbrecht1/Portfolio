@@ -45,10 +45,21 @@ export class AppComponent {
   constructor(private router: Router) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        if (['/imprint', '/privacy-policy', '/'].includes(event.urlAfterRedirects)) {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
       }
     });
   }
+
+  scrollToTopIfSameRoute(targetRoute: string) {
+    if (this.router.url === targetRoute) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      this.router.navigate([targetRoute]);
+    }
+  }
+
 
   ngOnInit(): void {
     AOS.init({

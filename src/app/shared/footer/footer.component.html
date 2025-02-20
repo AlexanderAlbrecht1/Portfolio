@@ -2,7 +2,7 @@
   <div class="footer-wrapper">
     <!-- first child -->
     <div>
-      <a [routerLink]="['/']" fragment="landingPage"
+      <a (click)="scrollToTopIfSameRoute('/')"
         ><div class="logo-wrapper"></div
       ></a>
       <!-- <div class="logo-wrapper"></div> -->
@@ -27,15 +27,15 @@
         ><div class="hover-wrapper"></div>
         LinkedIn</a
       >
-      <a href="#contact"
+      <a href="mailto:contact@alexander-albrecht.dev"
         ><div class="hover-wrapper"></div>
         Email</a
       >
-      <a routerLink="imprint"
+      <a (click)="scrollToTopIfSameRoute('/imprint')"
         ><div class="hover-wrapper"></div>
         {{ "footer.imprint" | translate }}</a
       >
-      <a routerLink="privacyPolicy"
+      <a (click)="scrollToTopIfSameRoute('/privacyPolicy')"
         ><div class="hover-wrapper"></div>
         {{ "footer.pp" | translate }}</a
       >
