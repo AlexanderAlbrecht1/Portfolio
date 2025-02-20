@@ -158,7 +158,11 @@ input.ng-invalid.ng-touched::placeholder {
 
 @media (max-width: 1240px) {
   .contact-wrapper {
+    gap: 16px;
     > div:nth-child(1) {
+      max-width: 440px;
+    }
+    > div:nth-child(2) {
       max-width: 500px;
     }
   }
@@ -168,14 +172,8 @@ input.ng-invalid.ng-touched::placeholder {
   .contact-wrapper {
     padding: 144px 32px;
     gap: 16px;
-  }
-}
-
-@media (max-width: 768px) {
-  .contact-wrapper {
     flex-direction: column;
     align-items: center;
-    gap: 64px;
     >div:nth-child(1) {
       width: unset;
       padding: 0 32px;
@@ -183,6 +181,18 @@ input.ng-invalid.ng-touched::placeholder {
     >div:nth-child(2) {
       width: unset;
       padding: 0 32px
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-wrapper {
+    padding: 144px 16px;
+    >div:nth-child(1) {
+      padding: 0;
+    }
+    >div:nth-child(2) {
+      padding: 0;
     }
   }
 }
