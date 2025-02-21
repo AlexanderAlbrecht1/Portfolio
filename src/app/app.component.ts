@@ -45,7 +45,7 @@ export class AppComponent {
   constructor(private router: Router) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        if (['/imprint', '/privacy-policy', '/'].includes(event.urlAfterRedirects)) {
+        if (['/imprint', '/privacyPolicy', '/'].includes(event.urlAfterRedirects)) {
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }
       }
@@ -77,10 +77,6 @@ export class AppComponent {
       this.hideHeader = true;
     } else {
       this.hideHeader = false;
-      // setTimeout(() => {
-      //   this.hideHeader = true;
-      // }
-      // , 5000);
     }
     this.lastScrollTop = currentScroll;
   }
