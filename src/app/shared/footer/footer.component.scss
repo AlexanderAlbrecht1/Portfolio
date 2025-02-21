@@ -81,6 +81,7 @@ a {
 }
 
 a:hover {
+  cursor: pointer;
   color: rgba(61, 207, 182, 1);
   transition: 0.5s ease;
   > .hover-wrapper {
