@@ -57,3 +57,28 @@ a {
     overflow-y: hidden;
   }
 }
+
+/* Für WebKit-Browser (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(28, 28, 28, 1); /* Hintergrund der Scrollbar */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(8, 70, 59, 1);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(61,207,182);
+}
+
+/* Für Firefox */
+* {
+  scrollbar-color: rgba(8, 70, 59, 1) rgba(28, 28, 28, 1);
+  scrollbar-width: thin;
+}
