@@ -3,7 +3,7 @@
 		"head1": "Wer ich bin",
 		"head2": "Über mich",
 		"intro": "Hi, ich bin Alex, 36 Jahre alt und ein deutschsprachiger Frontend-Entwickler aus Berlin. Motiviert von den grenzenlosen Möglichkeiten in der IT bin ich begeistert von der Gestaltung visuell ansprechender und intuitiver Websites und Anwendungen.",
-		"top1": "Ich bin hinsichtlich meiner Arbeitsumgebung flexibel bin, daher kann ich sowohl vor Ort in Berlin im Büro als auch remote effektiv arbeiten.",
+		"top1": "Ich bin hinsichtlich meiner Arbeitsumgebung flexibel, daher kann ich sowohl vor Ort in Berlin im Büro als auch remote effektiv arbeiten.",
 		"top2": "Ich bin aufgeschlossen gegenüber neuen Aufgaben und suche immer nach neuen Herausforderungen, um mein Wissen und meine Fähigkeiten zu festigen und stetig zu erweitern.",
 		"top3": "In meinem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben. Es ist eine kreative Form der Problemlösung. Ich bin stolz auf meine Fähigkeit, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu destillieren. Auf diese Weise helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken."
 	},
@@ -35,8 +35,10 @@
 		"project1": "Aufgabenmanager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag & Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
 		"project2": "Sharkie ist ein kleines „Jump and Run“-Spiel mit objektorientiertem Ansatz. Weiche Feinden aus, sammle Gegenstände und besiege den Endgegner.",
 		"project3": "Ein Pokémon-Trainer-Register, das dynamisch Daten von einer API abruft und anzeigt.",
+    "project4": "Diese App ist eine Slack-Klon-App. Sie revolutioniert die Teamkommunikation und -zusammenarbeit mit ihrer intuitiven Benutzeroberfläche, Echtzeit-Messaging und einer robusten Kanalorganisation.",
 		"switch": "Nächstes Projekt",
-		"text1": "Hier siehst du eine Auswahl meiner Projekte. Interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen."
+		"text1": "Hier siehst du eine Auswahl meiner Projekte. Interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "progress": "In Entwicklung..."
 	},
 	"skillset": {
 		"btn": "Lass uns reden",

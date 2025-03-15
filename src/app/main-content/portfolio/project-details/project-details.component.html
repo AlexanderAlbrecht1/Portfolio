@@ -179,3 +179,67 @@
     </div>
   </div>
 </div>
+
+<div class="project-detail-wrapper" *ngIf="project === 4">
+  <div>
+    <h1>04</h1>
+    <h2>DABubble </h2>
+    <h3 class="fira-code">{{ "portfolio.project.head" | translate }}</h3>
+    <p>
+      {{ "portfolio.project3" | translate }}
+    </p>
+    <div class="skill-wrapper">
+      <div class="skill">
+        <img
+          src="/assets/img/icons_overlay/javascript.svg"
+          alt="official JavaScript Icon"
+        />
+        <span>JavaScript</span>
+      </div>
+      <div class="skill">
+        <img
+          src="/assets/img/icons_overlay/html.svg"
+          alt="official HTML Icon"
+        />
+        <span>HTML</span>
+      </div>
+      <div class="skill">
+        <img src="/assets/img/icons_overlay/css.svg" alt="official CSS Icon" />
+        <span>CSS</span>
+      </div>
+      <div class="skill">
+        <img
+          src="/assets/img/icons_overlay/rest_api.svg"
+          alt="official Rest-Api Icon"
+        />
+        <span>Rest-Api</span>
+      </div>
+    </div>
+    <div class="btns-wrapper">
+      <a
+        class="btn"
+        target="_blank"
+        href="https://github.com/AlexanderAlbrecht1/Pokedex"
+        >GitHub
+        <div></div
+      ></a>
+      <a
+        class="btn"
+        target="_blank"
+        href="https://pokedex.alexander-albrecht.dev/"
+        >Live Test
+        <div></div
+      ></a>
+    </div>
+  </div>
+  <div>
+    <div class="close-window-wrapper">
+      <div (click)="onResetProject()"></div>
+    </div>
+    <img src="/assets/img/projects/pokedex2.png" alt="" />
+    <div class="next-project-wrapper" (click)="nextProject()">
+      <span>{{ "portfolio.switch" | translate }}</span>
+      <div></div>
+    </div>
+  </div>
+</div>

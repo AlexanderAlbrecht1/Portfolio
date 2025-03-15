@@ -35,8 +35,10 @@
 		"project1": "Task manager inspired by the Kanban system. Create and organize tasks with drag & drop functions, assign users and categories.",
 		"project2": "Sharkie is a small \"jump and run\" game with an object-oriented approach. Dodge enemies, collect items and defeat the final boss.",
 		"project3": "A Pokémon Trainer registry that dynamically retrieves and displays data from an API.",
+		"project4": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.",
 		"switch": "Next project",
-		"text1": "Discover a selection of my work here. Interact with projects to see my skills in action."
+		"text1": "Discover a selection of my work here. Interact with projects to see my skills in action.",
+    "progress": "In progress..."
 	},
 	"skillset": {
 		"btn": "Let's talk",
