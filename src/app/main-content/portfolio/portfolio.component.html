@@ -46,6 +46,7 @@
           </div>
           <span class="projects-skills">JavaScript | HTML | CSS</span>
         </div>
+
         <div
           class="single-project"
           (mouseover)="hoveredProject = 3"
@@ -56,25 +57,26 @@
             <span class="project-title fira-code">Portfolio</span>
             <div class="img-wrapper"></div>
           </div>
-          <span class="projects-skills"
-            >Angular | TypeScript | SCSS </span
-          >
+          <span class="projects-skills">Angular | TypeScript | SCSS </span>
         </div>
-        <div
-          class="single-project-progress relativ"
+        <div class="single-project-progress relativ single-project"
+          (mouseover)="hoveredProject = 4"
+          (mouseout)="hoveredProject = 0"
+          (click)="selectProject(4)"
         >
-
           <!-- Progress Overlay, remove whne done -->
-           <div class="progress">
+          <div class="progress">
             <p></p>
-           </div>
+          </div>
 
           <div class="d-flex-center">
-            <span class="project-title fira-code"> {{ "portfolio.progress" | translate }}</span>
+            <span class="project-title fira-code">
+              {{ "portfolio.progress" | translate }}</span
+            >
             <div class="img-wrapper"></div>
           </div>
           <span class="projects-skills"
-            >TypeScript | Angular | SCSS | Firebase</span
+            >Angular | TypeScript | SCSS | Firebase</span
           >
         </div>
       </div>
@@ -101,7 +103,7 @@
           <div></div>
         </div>
         <div
-          class="preview-frame preview-project-three d-none"
+          class="preview-frame preview-project-four d-none"
           [class.visibil]="hoveredProject === 4"
         >
           <div></div>

@@ -28,7 +28,7 @@ export class ProjectDetailsComponent {
   }
 
   nextProject() {
-    if (this.project < 3) {
+    if (this.project < 4) {
       this.project++;
     } else {
       this.project = 1;

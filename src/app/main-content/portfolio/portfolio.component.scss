@@ -160,6 +160,14 @@ p {
   }
 }
 
+.preview-project-four {
+  top: 143px;
+
+  > div:nth-child(2) {
+    background-image: url("/assets/img/projects/dabubble1.png");
+  }
+}
+
 .visibil {
   display: flex;
 }
