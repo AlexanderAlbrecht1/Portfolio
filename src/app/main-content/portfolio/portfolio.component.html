@@ -3,7 +3,7 @@
     <div
       class="d-none overlay"
       [class.visibil]="
-        clickedProject === 1 || clickedProject === 2 || clickedProject === 3
+        clickedProject === 1 || clickedProject === 2 || clickedProject === 3 || clickedProject === 4
       "
     >
       <div>
@@ -64,8 +64,8 @@
           (mouseout)="hoveredProject = 0"
           (click)="selectProject(4)"
         >
-          <!-- Progress Overlay, remove whne done -->
-          <div class="progress">
+          <!-- Progress Overlay, remove when done -->
+          <div class="progress" (click)="selectProject(4)">
             <p></p>
           </div>
 
